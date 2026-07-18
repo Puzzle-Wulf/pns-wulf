@@ -1,0 +1,2 @@
+# Core runtime has no mandatory third-party dependency.
+# For PNG template matching install: pip install -e ".[vision]"

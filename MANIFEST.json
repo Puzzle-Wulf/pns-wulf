@@ -1,0 +1,23 @@
+{
+  "name": "pns-wulf",
+  "version": "v1.33.7a",
+  "repository": "https://github.com/Puzzle-Wulf/pns-wulf",
+  "license": "Apache-2.0",
+  "python": ">=3.10",
+  "single_adb_instance_per_process": true,
+  "start_behavior": "start initializes runtime only; play executes queues",
+  "missing_click_event_behavior": "pause and wait for PNG/template or coordinate calibration",
+  "screenshot_commands": [
+    "./pns-bot screenshot --destination Desktop",
+    "./pns-bot screenshot --destination Userhome"
+  ],
+  "coordinate_command": "./pns-bot click-event set <event> --x <x> --y <y>",
+  "entry_points": [
+    "pns-bot",
+    "pns-bot.cmd",
+    "pns_bot.py"
+  ],
+  "task_count": 34,
+  "area_count": 13,
+  "screen_count": 34
+}

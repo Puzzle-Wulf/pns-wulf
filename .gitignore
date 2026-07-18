@@ -1,0 +1,40 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Local/private configuration
+config/pns_bot_config.json
+config/task_queues.json
+config/click_events.json
+
+# Runtime and personal data
+runtime/*
+!runtime/.gitkeep
+recordings/*
+!recordings/.gitkeep
+pns_character_db/*
+!pns_character_db/.gitkeep
+*.db
+
+# Generated screenshots and extraction results
+screenshots/
+sprites/_extracted/
+sprites/SPRITE_EXTRACT_REPORT.json
+
+# Local game packages
+sprites/*.apk
+sprites/*.apks
+sprites/*.apkx
+sprites/*.xapk
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

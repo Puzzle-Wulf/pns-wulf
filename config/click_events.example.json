@@ -1,0 +1,70 @@
+{
+  "version": "v1.33.7a",
+  "description": "Coordinates override templates. Missing/undetected click events pause the runner.",
+  "events": {
+    "answer_or_skip": {
+      "template": "assets/click-events/answer_or_skip.png",
+      "threshold": 0.86
+    },
+    "claim": {
+      "template": "assets/click-events/claim.png",
+      "threshold": 0.86
+    },
+    "confirm_antiserum_limit": {
+      "template": "assets/click-events/confirm_antiserum_limit.png",
+      "threshold": 0.86
+    },
+    "donate": {
+      "template": "assets/click-events/donate.png",
+      "threshold": 0.86
+    },
+    "food": {
+      "template": "assets/click-events/food.png",
+      "threshold": 0.86
+    },
+    "free_recruit": {
+      "template": "assets/click-events/free_recruit.png",
+      "threshold": 0.86
+    },
+    "gas": {
+      "template": "assets/click-events/gas.png",
+      "threshold": 0.86
+    },
+    "gather_speedup": {
+      "template": "assets/click-events/gather_speedup.png",
+      "threshold": 0.86
+    },
+    "help_all": {
+      "template": "assets/click-events/help_all.png",
+      "threshold": 0.86
+    },
+    "praise": {
+      "template": "assets/click-events/praise.png",
+      "threshold": 0.86
+    },
+    "research": {
+      "template": "assets/click-events/research.png",
+      "threshold": 0.86
+    },
+    "search": {
+      "template": "assets/click-events/search.png",
+      "threshold": 0.86
+    },
+    "serum": {
+      "template": "assets/click-events/serum.png",
+      "threshold": 0.86
+    },
+    "shield": {
+      "template": "assets/click-events/shield.png",
+      "threshold": 0.86
+    },
+    "steel": {
+      "template": "assets/click-events/steel.png",
+      "threshold": 0.86
+    },
+    "wood": {
+      "template": "assets/click-events/wood.png",
+      "threshold": 0.86
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "version": "v1.33.7a",
+  "setup_done": false,
+  "subnet": "10.0.10.0/24",
+  "host_url": "http://10.0.10.1:8789",
+  "host_port": 8789,
+  "adb_path": "adb",
+  "serial": "emulator-5554",
+  "instance_label": "Farmen-0",
+  "account": "Shadow-Claws",
+  "package_name": "",
+  "character_name": "Shadow-Claws",
+  "screenshots_dir": "runtime/screenshots",
+  "character_db_dir": "runtime/characters",
+  "execute_clicks": false,
+  "validate_click_events_in_dry_run": false,
+  "task_tree_file": "data/pns_tasks_areas_screens_full.json",
+  "click_events_file": "config/click_events.json",
+  "pause_on_missing_click_event": true,
+  "pause_state_file": "runtime/pause-state.json",
+  "pause_poll_seconds": 3,
+  "pause_timeout_seconds": 0,
+  "click_match_threshold": 0.86,
+  "click_repeat_max": 10,
+  "click_repeat_delay_seconds": 0.75,
+  "startup_wait_timeout_sec": 45,
+  "startup_wait_interval_sec": 1.0,
+  "startup_wait_min_screenshots": 2,
+  "startup_wait_stable_screenshots": 2,
+  "irc": {
+    "enabled": false,
+    "server": "127.0.0.1",
+    "port": 6697,
+    "use_tls": true,
+    "tls_verify": true,
+    "nick": "PNSWulf",
+    "username": "pns-wulf",
+    "realname": "PNS-Wulf IRC Relay",
+    "channels": [
+      "#pns-wulf"
+    ],
+    "password": "",
+    "password_env": "PNS_IRC_PASSWORD"
+  },
+  "runtime_state_file": "runtime/state.json",
+  "start_behavior": "setup_network_adb_app_character_db_only_no_queue",
+  "characters": [
+    "Shadow-Claws"
+  ],
+  "active_character_index": 0,
+  "character_identify": {
+    "method": "screenshot_first_ocr_placeholder",
+    "account_name_hint": "Öffne das Charakterfenster und lies den sichtbaren Accountnamen.",
+    "open_character_window": {
+      "enabled": true,
+      "steps": []
+    },
+    "switch_character": {
+      "enabled": true,
+      "strategy": "manual_or_recorded_steps",
+      "recorded_steps": [],
+      "note": "Task-Recorder nutzen, um die Klickfolge zum Accountwechsel aufzuzeichnen."
+    }
+  }
+}

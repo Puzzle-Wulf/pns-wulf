@@ -1,0 +1,118 @@
+{
+  "version": "v1.33.7a",
+  "active_queue": "default_q1",
+  "queues": {
+    "default_q1": {
+      "description": "LSS-derived default queue 1",
+      "enabled": true,
+      "tasks": [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "alliance_gathering",
+        "gather_speedup",
+        "shield",
+        "resource_gathering"
+      ]
+    },
+    "default_q2": {
+      "description": "LSS-derived default queue 2",
+      "enabled": true,
+      "tasks": [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "hq_upgrading",
+        "building_upgrading",
+        "research",
+        "wall_repair",
+        "trap_crafting",
+        "troop_training"
+      ]
+    },
+    "default_q3": {
+      "description": "LSS-derived default queue 3",
+      "enabled": true,
+      "tasks": [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "troop_healing",
+        "tavern_recruitment",
+        "skills",
+        "game_gifts",
+        "bag_items",
+        "supply_depot"
+      ]
+    },
+    "default_q4": {
+      "description": "LSS-derived default queue 4",
+      "enabled": true,
+      "tasks": [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "bank_investment",
+        "ruins",
+        "pit_gather",
+        "pit_attack",
+        "campaign_puzzle_auto"
+      ]
+    },
+    "default_q5": {
+      "description": "LSS-derived default queue 5",
+      "enabled": true,
+      "tasks": [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "campaign_puzzle_general",
+        "dynamic_base_puzzles",
+        "duel_survival",
+        "zombies_40",
+        "quest_rewards"
+      ]
+    },
+    "default_q6": {
+      "description": "LSS-derived default queue 6",
+      "enabled": true,
+      "tasks": [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "zombies_40",
+        "quest_rewards"
+      ]
+    }
+  }
+}

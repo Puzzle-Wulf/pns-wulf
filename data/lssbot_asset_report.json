@@ -1,0 +1,1127 @@
+{
+  "jar_present": true,
+  "jar": "/mnt/data/lssbot5.jar",
+  "xapk_entries": [],
+  "ui_assets": [
+    "com/lssbot/assets/account.svg",
+    "com/lssbot/assets/back.svg",
+    "com/lssbot/assets/back_hover.svg",
+    "com/lssbot/assets/book.svg",
+    "com/lssbot/assets/bot.svg",
+    "com/lssbot/assets/browse.svg",
+    "com/lssbot/assets/browse_hover.svg",
+    "com/lssbot/assets/bug.svg",
+    "com/lssbot/assets/bug_hover.svg",
+    "com/lssbot/assets/bullhorn.svg",
+    "com/lssbot/assets/camera.svg",
+    "com/lssbot/assets/camera_hover.svg",
+    "com/lssbot/assets/chat.svg",
+    "com/lssbot/assets/chat_hover.svg",
+    "com/lssbot/assets/code.svg",
+    "com/lssbot/assets/code_hover.svg",
+    "com/lssbot/assets/cog.svg",
+    "com/lssbot/assets/cog_hover.svg",
+    "com/lssbot/assets/copy.svg",
+    "com/lssbot/assets/de.svg",
+    "com/lssbot/assets/development.svg",
+    "com/lssbot/assets/drag.svg",
+    "com/lssbot/assets/empty.png",
+    "com/lssbot/assets/emulator.svg",
+    "com/lssbot/assets/emu_main_ldp5.png",
+    "com/lssbot/assets/emu_main_ldp9.png",
+    "com/lssbot/assets/emu_main_memu.png",
+    "com/lssbot/assets/emu_main_nox.png",
+    "com/lssbot/assets/en.svg",
+    "com/lssbot/assets/es.svg",
+    "com/lssbot/assets/exclamation.svg",
+    "com/lssbot/assets/file.svg",
+    "com/lssbot/assets/fr.svg",
+    "com/lssbot/assets/guide.svg",
+    "com/lssbot/assets/guide_hover.svg",
+    "com/lssbot/assets/hide.svg",
+    "com/lssbot/assets/hide_hover.svg",
+    "com/lssbot/assets/home.svg",
+    "com/lssbot/assets/home_hover.svg",
+    "com/lssbot/assets/install.svg",
+    "com/lssbot/assets/install_hover.svg",
+    "com/lssbot/assets/it.svg",
+    "com/lssbot/assets/keyboard.svg",
+    "com/lssbot/assets/ldapp1.png",
+    "com/lssbot/assets/ldapp2.png",
+    "com/lssbot/assets/ldstore.png",
+    "com/lssbot/assets/ldstore2.png",
+    "com/lssbot/assets/ldx.png",
+    "com/lssbot/assets/lightning.svg",
+    "com/lssbot/assets/loading.svg",
+    "com/lssbot/assets/loading_hover.svg",
+    "com/lssbot/assets/log.svg",
+    "com/lssbot/assets/logo.png",
+    "com/lssbot/assets/lssbot_head1.png",
+    "com/lssbot/assets/lssbot_head2.png",
+    "com/lssbot/assets/mail.svg",
+    "com/lssbot/assets/mail_hover.svg",
+    "com/lssbot/assets/match.svg",
+    "com/lssbot/assets/minus.svg",
+    "com/lssbot/assets/misc.svg",
+    "com/lssbot/assets/mouse.svg",
+    "com/lssbot/assets/optimize.svg",
+    "com/lssbot/assets/optimize_hover.svg",
+    "com/lssbot/assets/pause.svg",
+    "com/lssbot/assets/pause_hover.svg",
+    "com/lssbot/assets/pencil.svg",
+    "com/lssbot/assets/permitted.svg",
+    "com/lssbot/assets/pe_layout.png",
+    "com/lssbot/assets/play.svg",
+    "com/lssbot/assets/play_hover.svg",
+    "com/lssbot/assets/plus.svg",
+    "com/lssbot/assets/pointer.svg",
+    "com/lssbot/assets/premium.svg",
+    "com/lssbot/assets/premium1.svg",
+    "com/lssbot/assets/pt.svg",
+    "com/lssbot/assets/puzzle.svg",
+    "com/lssbot/assets/question.svg",
+    "com/lssbot/assets/ref.png",
+    "com/lssbot/assets/refer.svg",
+    "com/lssbot/assets/repo.svg",
+    "com/lssbot/assets/roebot_head1.png",
+    "com/lssbot/assets/roebot_head2.png",
+    "com/lssbot/assets/rok_layout.png",
+    "com/lssbot/assets/ru.svg",
+    "com/lssbot/assets/sale.svg",
+    "com/lssbot/assets/save.svg",
+    "com/lssbot/assets/save_hover.svg",
+    "com/lssbot/assets/script.svg",
+    "com/lssbot/assets/search.svg",
+    "com/lssbot/assets/share.svg",
+    "com/lssbot/assets/share_hover.svg",
+    "com/lssbot/assets/show.svg",
+    "com/lssbot/assets/show_hover.svg",
+    "com/lssbot/assets/skip.svg",
+    "com/lssbot/assets/skip_hover.svg",
+    "com/lssbot/assets/star.svg",
+    "com/lssbot/assets/stop.svg",
+    "com/lssbot/assets/stop_hover.svg",
+    "com/lssbot/assets/telegram.svg",
+    "com/lssbot/assets/telegram_hover.svg",
+    "com/lssbot/assets/toggle_off.svg",
+    "com/lssbot/assets/toggle_off_hover.svg",
+    "com/lssbot/assets/toggle_on.svg",
+    "com/lssbot/assets/toggle_on_hover.svg",
+    "com/lssbot/assets/tool.svg",
+    "com/lssbot/assets/tools.svg",
+    "com/lssbot/assets/tool_hover.svg",
+    "com/lssbot/assets/trashcan.svg",
+    "com/lssbot/assets/trashcan_hover.svg",
+    "com/lssbot/assets/update.svg",
+    "com/lssbot/assets/youtube.svg",
+    "rotate_3.jpg",
+    "rotate_2.jpg",
+    "grid_2.jpg",
+    "rotate.jpg",
+    "canvas_hint.jpg",
+    "grid.jpg",
+    "normal_2.jpg",
+    "normal.jpg",
+    "grid_hint.jpg",
+    "canvas.jpg"
+  ],
+  "pas_image_groups": {
+    "Alliance": {
+      "base": "pas/alliance/",
+      "stems": []
+    },
+    "AutoUseResource": {
+      "base": "pas/rss_use/",
+      "stems": [
+        "confirm",
+        "head",
+        "insufficient"
+      ]
+    },
+    "BuildingUpgrading": {
+      "base": "pas/upgrading/",
+      "stems": [
+        "extra",
+        "extra2",
+        "free",
+        "glory",
+        "go",
+        "help",
+        "hint",
+        "hq_req",
+        "niq",
+        "reqs",
+        "su",
+        "su2",
+        "time",
+        "u1",
+        "u2",
+        "u3"
+      ]
+    },
+    "CampaignPuzzle": {
+      "base": "pas/campaign_puzzle/",
+      "stems": [
+        "auto",
+        "grenade1",
+        "grenade2",
+        "grenade3",
+        "grenade4",
+        "moves",
+        "su"
+      ]
+    },
+    "ChestPuzzle": {
+      "base": "pas/chest_puzzle/",
+      "stems": [
+        "chest"
+      ]
+    },
+    "DailyToDo": {
+      "base": "pas/dtd/",
+      "stems": [
+        "btn",
+        "head"
+      ]
+    },
+    "Dialogue": {
+      "base": "pas/dialogue/",
+      "stems": [
+        "amber",
+        "amber2",
+        "city",
+        "fox",
+        "maverick",
+        "maverick2",
+        "nova",
+        "you"
+      ]
+    },
+    "Dispatch": {
+      "base": "pas/dispatch/",
+      "stems": [
+        "dispatch",
+        "qs"
+      ]
+    },
+    "GameAssistant": {
+      "base": "pas/assistant/",
+      "stems": [
+        "1",
+        "2",
+        "3",
+        "btn",
+        "dsa",
+        "dsax",
+        "header",
+        "pop1",
+        "pop2",
+        "pop3",
+        "x"
+      ]
+    },
+    "Loading": {
+      "base": "pas/loading/",
+      "stems": [
+        "dsa",
+        "logo",
+        "logo2",
+        "maint",
+        "title"
+      ]
+    },
+    "March": {
+      "base": "pas/march/",
+      "stems": [
+        "arrival_time",
+        "boost_details",
+        "clear_hero",
+        "dispatch",
+        "full",
+        "no_units",
+        "obtain",
+        "quick_select",
+        "rec_hero"
+      ]
+    },
+    "Menu": {
+      "base": "pas/menu/",
+      "stems": [
+        "back"
+      ]
+    },
+    "Search": {
+      "base": "pas/search/",
+      "stems": [
+        "minus",
+        "opt",
+        "plus",
+        "search",
+        "slider"
+      ]
+    },
+    "Slider": {
+      "base": "pas/slider/",
+      "stems": [
+        "confirm",
+        "header",
+        "minus",
+        "plus",
+        "slider",
+        "use"
+      ]
+    },
+    "Viewport": {
+      "base": "pas/viewport/",
+      "stems": [
+        "base",
+        "boosts",
+        "boosts2",
+        "boosts3",
+        "boosts4",
+        "campaign_back",
+        "campaign_leave",
+        "dc",
+        "expand",
+        "gift_center",
+        "hospital",
+        "map",
+        "minimize",
+        "popup1",
+        "popup2",
+        "settings"
+      ]
+    }
+  },
+  "missing_pas_assets": [
+    {
+      "class": "AutoUseResource",
+      "expected_any_of": [
+        "pas/rss_use/confirm.png",
+        "pas/rss_use/confirm.webp",
+        "pas/rss_use/confirm.jpg"
+      ],
+      "save_to": "assets/pas/rss_use/"
+    },
+    {
+      "class": "AutoUseResource",
+      "expected_any_of": [
+        "pas/rss_use/head.png",
+        "pas/rss_use/head.webp",
+        "pas/rss_use/head.jpg"
+      ],
+      "save_to": "assets/pas/rss_use/"
+    },
+    {
+      "class": "AutoUseResource",
+      "expected_any_of": [
+        "pas/rss_use/insufficient.png",
+        "pas/rss_use/insufficient.webp",
+        "pas/rss_use/insufficient.jpg"
+      ],
+      "save_to": "assets/pas/rss_use/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/extra.png",
+        "pas/upgrading/extra.webp",
+        "pas/upgrading/extra.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/extra2.png",
+        "pas/upgrading/extra2.webp",
+        "pas/upgrading/extra2.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/free.png",
+        "pas/upgrading/free.webp",
+        "pas/upgrading/free.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/glory.png",
+        "pas/upgrading/glory.webp",
+        "pas/upgrading/glory.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/go.png",
+        "pas/upgrading/go.webp",
+        "pas/upgrading/go.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/help.png",
+        "pas/upgrading/help.webp",
+        "pas/upgrading/help.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/hint.png",
+        "pas/upgrading/hint.webp",
+        "pas/upgrading/hint.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/hq_req.png",
+        "pas/upgrading/hq_req.webp",
+        "pas/upgrading/hq_req.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/niq.png",
+        "pas/upgrading/niq.webp",
+        "pas/upgrading/niq.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/reqs.png",
+        "pas/upgrading/reqs.webp",
+        "pas/upgrading/reqs.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/su.png",
+        "pas/upgrading/su.webp",
+        "pas/upgrading/su.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/su2.png",
+        "pas/upgrading/su2.webp",
+        "pas/upgrading/su2.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/time.png",
+        "pas/upgrading/time.webp",
+        "pas/upgrading/time.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/u1.png",
+        "pas/upgrading/u1.webp",
+        "pas/upgrading/u1.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/u2.png",
+        "pas/upgrading/u2.webp",
+        "pas/upgrading/u2.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "BuildingUpgrading",
+      "expected_any_of": [
+        "pas/upgrading/u3.png",
+        "pas/upgrading/u3.webp",
+        "pas/upgrading/u3.jpg"
+      ],
+      "save_to": "assets/pas/upgrading/"
+    },
+    {
+      "class": "CampaignPuzzle",
+      "expected_any_of": [
+        "pas/campaign_puzzle/auto.png",
+        "pas/campaign_puzzle/auto.webp",
+        "pas/campaign_puzzle/auto.jpg"
+      ],
+      "save_to": "assets/pas/campaign_puzzle/"
+    },
+    {
+      "class": "CampaignPuzzle",
+      "expected_any_of": [
+        "pas/campaign_puzzle/grenade1.png",
+        "pas/campaign_puzzle/grenade1.webp",
+        "pas/campaign_puzzle/grenade1.jpg"
+      ],
+      "save_to": "assets/pas/campaign_puzzle/"
+    },
+    {
+      "class": "CampaignPuzzle",
+      "expected_any_of": [
+        "pas/campaign_puzzle/grenade2.png",
+        "pas/campaign_puzzle/grenade2.webp",
+        "pas/campaign_puzzle/grenade2.jpg"
+      ],
+      "save_to": "assets/pas/campaign_puzzle/"
+    },
+    {
+      "class": "CampaignPuzzle",
+      "expected_any_of": [
+        "pas/campaign_puzzle/grenade3.png",
+        "pas/campaign_puzzle/grenade3.webp",
+        "pas/campaign_puzzle/grenade3.jpg"
+      ],
+      "save_to": "assets/pas/campaign_puzzle/"
+    },
+    {
+      "class": "CampaignPuzzle",
+      "expected_any_of": [
+        "pas/campaign_puzzle/grenade4.png",
+        "pas/campaign_puzzle/grenade4.webp",
+        "pas/campaign_puzzle/grenade4.jpg"
+      ],
+      "save_to": "assets/pas/campaign_puzzle/"
+    },
+    {
+      "class": "CampaignPuzzle",
+      "expected_any_of": [
+        "pas/campaign_puzzle/moves.png",
+        "pas/campaign_puzzle/moves.webp",
+        "pas/campaign_puzzle/moves.jpg"
+      ],
+      "save_to": "assets/pas/campaign_puzzle/"
+    },
+    {
+      "class": "CampaignPuzzle",
+      "expected_any_of": [
+        "pas/campaign_puzzle/su.png",
+        "pas/campaign_puzzle/su.webp",
+        "pas/campaign_puzzle/su.jpg"
+      ],
+      "save_to": "assets/pas/campaign_puzzle/"
+    },
+    {
+      "class": "ChestPuzzle",
+      "expected_any_of": [
+        "pas/chest_puzzle/chest.png",
+        "pas/chest_puzzle/chest.webp",
+        "pas/chest_puzzle/chest.jpg"
+      ],
+      "save_to": "assets/pas/chest_puzzle/"
+    },
+    {
+      "class": "DailyToDo",
+      "expected_any_of": [
+        "pas/dtd/btn.png",
+        "pas/dtd/btn.webp",
+        "pas/dtd/btn.jpg"
+      ],
+      "save_to": "assets/pas/dtd/"
+    },
+    {
+      "class": "DailyToDo",
+      "expected_any_of": [
+        "pas/dtd/head.png",
+        "pas/dtd/head.webp",
+        "pas/dtd/head.jpg"
+      ],
+      "save_to": "assets/pas/dtd/"
+    },
+    {
+      "class": "Dialogue",
+      "expected_any_of": [
+        "pas/dialogue/amber.png",
+        "pas/dialogue/amber.webp",
+        "pas/dialogue/amber.jpg"
+      ],
+      "save_to": "assets/pas/dialogue/"
+    },
+    {
+      "class": "Dialogue",
+      "expected_any_of": [
+        "pas/dialogue/amber2.png",
+        "pas/dialogue/amber2.webp",
+        "pas/dialogue/amber2.jpg"
+      ],
+      "save_to": "assets/pas/dialogue/"
+    },
+    {
+      "class": "Dialogue",
+      "expected_any_of": [
+        "pas/dialogue/city.png",
+        "pas/dialogue/city.webp",
+        "pas/dialogue/city.jpg"
+      ],
+      "save_to": "assets/pas/dialogue/"
+    },
+    {
+      "class": "Dialogue",
+      "expected_any_of": [
+        "pas/dialogue/fox.png",
+        "pas/dialogue/fox.webp",
+        "pas/dialogue/fox.jpg"
+      ],
+      "save_to": "assets/pas/dialogue/"
+    },
+    {
+      "class": "Dialogue",
+      "expected_any_of": [
+        "pas/dialogue/maverick.png",
+        "pas/dialogue/maverick.webp",
+        "pas/dialogue/maverick.jpg"
+      ],
+      "save_to": "assets/pas/dialogue/"
+    },
+    {
+      "class": "Dialogue",
+      "expected_any_of": [
+        "pas/dialogue/maverick2.png",
+        "pas/dialogue/maverick2.webp",
+        "pas/dialogue/maverick2.jpg"
+      ],
+      "save_to": "assets/pas/dialogue/"
+    },
+    {
+      "class": "Dialogue",
+      "expected_any_of": [
+        "pas/dialogue/nova.png",
+        "pas/dialogue/nova.webp",
+        "pas/dialogue/nova.jpg"
+      ],
+      "save_to": "assets/pas/dialogue/"
+    },
+    {
+      "class": "Dialogue",
+      "expected_any_of": [
+        "pas/dialogue/you.png",
+        "pas/dialogue/you.webp",
+        "pas/dialogue/you.jpg"
+      ],
+      "save_to": "assets/pas/dialogue/"
+    },
+    {
+      "class": "Dispatch",
+      "expected_any_of": [
+        "pas/dispatch/dispatch.png",
+        "pas/dispatch/dispatch.webp",
+        "pas/dispatch/dispatch.jpg"
+      ],
+      "save_to": "assets/pas/dispatch/"
+    },
+    {
+      "class": "Dispatch",
+      "expected_any_of": [
+        "pas/dispatch/qs.png",
+        "pas/dispatch/qs.webp",
+        "pas/dispatch/qs.jpg"
+      ],
+      "save_to": "assets/pas/dispatch/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/1.png",
+        "pas/assistant/1.webp",
+        "pas/assistant/1.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/2.png",
+        "pas/assistant/2.webp",
+        "pas/assistant/2.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/3.png",
+        "pas/assistant/3.webp",
+        "pas/assistant/3.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/btn.png",
+        "pas/assistant/btn.webp",
+        "pas/assistant/btn.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/dsa.png",
+        "pas/assistant/dsa.webp",
+        "pas/assistant/dsa.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/dsax.png",
+        "pas/assistant/dsax.webp",
+        "pas/assistant/dsax.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/header.png",
+        "pas/assistant/header.webp",
+        "pas/assistant/header.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/pop1.png",
+        "pas/assistant/pop1.webp",
+        "pas/assistant/pop1.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/pop2.png",
+        "pas/assistant/pop2.webp",
+        "pas/assistant/pop2.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/pop3.png",
+        "pas/assistant/pop3.webp",
+        "pas/assistant/pop3.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "GameAssistant",
+      "expected_any_of": [
+        "pas/assistant/x.png",
+        "pas/assistant/x.webp",
+        "pas/assistant/x.jpg"
+      ],
+      "save_to": "assets/pas/assistant/"
+    },
+    {
+      "class": "Loading",
+      "expected_any_of": [
+        "pas/loading/dsa.png",
+        "pas/loading/dsa.webp",
+        "pas/loading/dsa.jpg"
+      ],
+      "save_to": "assets/pas/loading/"
+    },
+    {
+      "class": "Loading",
+      "expected_any_of": [
+        "pas/loading/logo.png",
+        "pas/loading/logo.webp",
+        "pas/loading/logo.jpg"
+      ],
+      "save_to": "assets/pas/loading/"
+    },
+    {
+      "class": "Loading",
+      "expected_any_of": [
+        "pas/loading/logo2.png",
+        "pas/loading/logo2.webp",
+        "pas/loading/logo2.jpg"
+      ],
+      "save_to": "assets/pas/loading/"
+    },
+    {
+      "class": "Loading",
+      "expected_any_of": [
+        "pas/loading/maint.png",
+        "pas/loading/maint.webp",
+        "pas/loading/maint.jpg"
+      ],
+      "save_to": "assets/pas/loading/"
+    },
+    {
+      "class": "Loading",
+      "expected_any_of": [
+        "pas/loading/title.png",
+        "pas/loading/title.webp",
+        "pas/loading/title.jpg"
+      ],
+      "save_to": "assets/pas/loading/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/arrival_time.png",
+        "pas/march/arrival_time.webp",
+        "pas/march/arrival_time.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/boost_details.png",
+        "pas/march/boost_details.webp",
+        "pas/march/boost_details.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/clear_hero.png",
+        "pas/march/clear_hero.webp",
+        "pas/march/clear_hero.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/dispatch.png",
+        "pas/march/dispatch.webp",
+        "pas/march/dispatch.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/full.png",
+        "pas/march/full.webp",
+        "pas/march/full.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/no_units.png",
+        "pas/march/no_units.webp",
+        "pas/march/no_units.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/obtain.png",
+        "pas/march/obtain.webp",
+        "pas/march/obtain.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/quick_select.png",
+        "pas/march/quick_select.webp",
+        "pas/march/quick_select.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "March",
+      "expected_any_of": [
+        "pas/march/rec_hero.png",
+        "pas/march/rec_hero.webp",
+        "pas/march/rec_hero.jpg"
+      ],
+      "save_to": "assets/pas/march/"
+    },
+    {
+      "class": "Menu",
+      "expected_any_of": [
+        "pas/menu/back.png",
+        "pas/menu/back.webp",
+        "pas/menu/back.jpg"
+      ],
+      "save_to": "assets/pas/menu/"
+    },
+    {
+      "class": "Search",
+      "expected_any_of": [
+        "pas/search/minus.png",
+        "pas/search/minus.webp",
+        "pas/search/minus.jpg"
+      ],
+      "save_to": "assets/pas/search/"
+    },
+    {
+      "class": "Search",
+      "expected_any_of": [
+        "pas/search/opt.png",
+        "pas/search/opt.webp",
+        "pas/search/opt.jpg"
+      ],
+      "save_to": "assets/pas/search/"
+    },
+    {
+      "class": "Search",
+      "expected_any_of": [
+        "pas/search/plus.png",
+        "pas/search/plus.webp",
+        "pas/search/plus.jpg"
+      ],
+      "save_to": "assets/pas/search/"
+    },
+    {
+      "class": "Search",
+      "expected_any_of": [
+        "pas/search/search.png",
+        "pas/search/search.webp",
+        "pas/search/search.jpg"
+      ],
+      "save_to": "assets/pas/search/"
+    },
+    {
+      "class": "Search",
+      "expected_any_of": [
+        "pas/search/slider.png",
+        "pas/search/slider.webp",
+        "pas/search/slider.jpg"
+      ],
+      "save_to": "assets/pas/search/"
+    },
+    {
+      "class": "Slider",
+      "expected_any_of": [
+        "pas/slider/confirm.png",
+        "pas/slider/confirm.webp",
+        "pas/slider/confirm.jpg"
+      ],
+      "save_to": "assets/pas/slider/"
+    },
+    {
+      "class": "Slider",
+      "expected_any_of": [
+        "pas/slider/header.png",
+        "pas/slider/header.webp",
+        "pas/slider/header.jpg"
+      ],
+      "save_to": "assets/pas/slider/"
+    },
+    {
+      "class": "Slider",
+      "expected_any_of": [
+        "pas/slider/minus.png",
+        "pas/slider/minus.webp",
+        "pas/slider/minus.jpg"
+      ],
+      "save_to": "assets/pas/slider/"
+    },
+    {
+      "class": "Slider",
+      "expected_any_of": [
+        "pas/slider/plus.png",
+        "pas/slider/plus.webp",
+        "pas/slider/plus.jpg"
+      ],
+      "save_to": "assets/pas/slider/"
+    },
+    {
+      "class": "Slider",
+      "expected_any_of": [
+        "pas/slider/slider.png",
+        "pas/slider/slider.webp",
+        "pas/slider/slider.jpg"
+      ],
+      "save_to": "assets/pas/slider/"
+    },
+    {
+      "class": "Slider",
+      "expected_any_of": [
+        "pas/slider/use.png",
+        "pas/slider/use.webp",
+        "pas/slider/use.jpg"
+      ],
+      "save_to": "assets/pas/slider/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/base.png",
+        "pas/viewport/base.webp",
+        "pas/viewport/base.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/boosts.png",
+        "pas/viewport/boosts.webp",
+        "pas/viewport/boosts.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/boosts2.png",
+        "pas/viewport/boosts2.webp",
+        "pas/viewport/boosts2.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/boosts3.png",
+        "pas/viewport/boosts3.webp",
+        "pas/viewport/boosts3.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/boosts4.png",
+        "pas/viewport/boosts4.webp",
+        "pas/viewport/boosts4.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/campaign_back.png",
+        "pas/viewport/campaign_back.webp",
+        "pas/viewport/campaign_back.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/campaign_leave.png",
+        "pas/viewport/campaign_leave.webp",
+        "pas/viewport/campaign_leave.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/dc.png",
+        "pas/viewport/dc.webp",
+        "pas/viewport/dc.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/expand.png",
+        "pas/viewport/expand.webp",
+        "pas/viewport/expand.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/gift_center.png",
+        "pas/viewport/gift_center.webp",
+        "pas/viewport/gift_center.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/hospital.png",
+        "pas/viewport/hospital.webp",
+        "pas/viewport/hospital.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/map.png",
+        "pas/viewport/map.webp",
+        "pas/viewport/map.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/minimize.png",
+        "pas/viewport/minimize.webp",
+        "pas/viewport/minimize.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/popup1.png",
+        "pas/viewport/popup1.webp",
+        "pas/viewport/popup1.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/popup2.png",
+        "pas/viewport/popup2.webp",
+        "pas/viewport/popup2.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    },
+    {
+      "class": "Viewport",
+      "expected_any_of": [
+        "pas/viewport/settings.png",
+        "pas/viewport/settings.webp",
+        "pas/viewport/settings.jpg"
+      ],
+      "save_to": "assets/pas/viewport/"
+    }
+  ],
+  "version": "v1.33.7a"
+}

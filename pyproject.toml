@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pns-wulf"
+version = "1.33.7a"
+description = "ADB automation and calibration toolkit for Puzzle & Survival"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE.md"}
+authors = [{name = "Puzzle-Wulf"}]
+keywords = ["adb", "automation", "puzzle-and-survival", "template-matching"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux"
+]
+
+[project.optional-dependencies]
+vision = ["numpy>=1.26", "opencv-python-headless>=4.10"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+pns-bot = "pns_wulf.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Puzzle-Wulf/pns-wulf"
+Documentation = "https://github.com/Puzzle-Wulf/pns-wulf/blob/main/INDEX.md"
+Issues = "https://github.com/Puzzle-Wulf/pns-wulf/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pns-wulf]
+display-version = "v1.33.7a"

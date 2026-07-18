@@ -1,0 +1,2133 @@
+{
+  "version": "v1.33.7a",
+  "mode": "query_loop_not_infinite_action_loop",
+  "areas": {
+    "BASE": {
+      "screens": [
+        "BASE_HOME",
+        "BASE_RESOURCE_BAR",
+        "BASE_POPUP"
+      ]
+    },
+    "WORLD_MAP": {
+      "screens": [
+        "MAP_HOME",
+        "SEARCH_MENU",
+        "MARCH_MENU"
+      ]
+    },
+    "CHAT": {
+      "screens": [
+        "CHAT_CLOSED",
+        "CHAT_OPEN",
+        "CHAT_INPUT"
+      ]
+    },
+    "ALLIANCE": {
+      "screens": [
+        "ALLIANCE_HOME",
+        "ALLIANCE_RESEARCH",
+        "ALLIANCE_GIFTS",
+        "ALLIANCE_GATHERING"
+      ]
+    },
+    "BUFFS": {
+      "screens": [
+        "BUFF_HOME",
+        "BUFF_SHIELD",
+        "BUFF_GATHER_SPEED"
+      ]
+    },
+    "NOVA": {
+      "screens": [
+        "NOVA_HOME",
+        "NOVA_DAILY",
+        "NOVA_RESEARCH"
+      ]
+    },
+    "NOAH_TAVERN": {
+      "screens": [
+        "TAVERN_HOME",
+        "TAVERN_RECRUIT"
+      ]
+    },
+    "RADIO": {
+      "screens": [
+        "RADIO_HOME",
+        "RADIO_QUESTION"
+      ]
+    },
+    "BAG": {
+      "screens": [
+        "BAG_HOME",
+        "BAG_ITEMS"
+      ]
+    },
+    "PIT": {
+      "screens": [
+        "PIT_HOME",
+        "PIT_GATHER",
+        "PIT_ATTACK"
+      ]
+    },
+    "CAMPAIGN": {
+      "screens": [
+        "CAMPAIGN_HOME",
+        "CAMPAIGN_PUZZLE"
+      ]
+    },
+    "ZOMBIES": {
+      "screens": [
+        "ZOMBIE_SEARCH",
+        "ZOMBIE_TARGET"
+      ]
+    },
+    "QUESTS": {
+      "screens": [
+        "QUEST_HOME",
+        "QUEST_REWARDS"
+      ]
+    }
+  },
+  "screens": {
+    "BASE_HOME": {
+      "area": "BASE",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "BASE_RESOURCE_BAR": {
+      "area": "BASE",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "BASE_POPUP": {
+      "area": "BASE",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "MAP_HOME": {
+      "area": "WORLD_MAP",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "SEARCH_MENU": {
+      "area": "WORLD_MAP",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "MARCH_MENU": {
+      "area": "WORLD_MAP",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "CHAT_CLOSED": {
+      "area": "CHAT",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "CHAT_OPEN": {
+      "area": "CHAT",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "CHAT_INPUT": {
+      "area": "CHAT",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "ALLIANCE_HOME": {
+      "area": "ALLIANCE",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "ALLIANCE_RESEARCH": {
+      "area": "ALLIANCE",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "ALLIANCE_GIFTS": {
+      "area": "ALLIANCE",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "ALLIANCE_GATHERING": {
+      "area": "ALLIANCE",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "BUFF_HOME": {
+      "area": "BUFFS",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "BUFF_SHIELD": {
+      "area": "BUFFS",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "BUFF_GATHER_SPEED": {
+      "area": "BUFFS",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "NOVA_HOME": {
+      "area": "NOVA",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "NOVA_DAILY": {
+      "area": "NOVA",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "NOVA_RESEARCH": {
+      "area": "NOVA",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "TAVERN_HOME": {
+      "area": "NOAH_TAVERN",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "TAVERN_RECRUIT": {
+      "area": "NOAH_TAVERN",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "RADIO_HOME": {
+      "area": "RADIO",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "RADIO_QUESTION": {
+      "area": "RADIO",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "BAG_HOME": {
+      "area": "BAG",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "BAG_ITEMS": {
+      "area": "BAG",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "PIT_HOME": {
+      "area": "PIT",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "PIT_GATHER": {
+      "area": "PIT",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "PIT_ATTACK": {
+      "area": "PIT",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "CAMPAIGN_HOME": {
+      "area": "CAMPAIGN",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "CAMPAIGN_PUZZLE": {
+      "area": "CAMPAIGN",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "ZOMBIE_SEARCH": {
+      "area": "ZOMBIES",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "ZOMBIE_TARGET": {
+      "area": "ZOMBIES",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "QUEST_HOME": {
+      "area": "QUESTS",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    },
+    "QUEST_REWARDS": {
+      "area": "QUESTS",
+      "detect": {
+        "mode": "screenshot_or_template",
+        "templates": [],
+        "ocr_any": []
+      }
+    }
+  },
+  "tasks": [
+    {
+      "id": "speedup_help",
+      "name": "Speedup Help",
+      "area": "ALLIANCE",
+      "aliases": [
+        "Speedup Help",
+        "Alliance Help"
+      ],
+      "cooldown_seconds": 1800,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "check",
+          "name": "help_available"
+        },
+        {
+          "type": "tap_area",
+          "target": "help_all"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "nova_daily_praise",
+      "name": "Nova Daily > Praise",
+      "area": "NOVA",
+      "aliases": [
+        "Nova Daily",
+        "Praise"
+      ],
+      "cooldown_seconds": 86400,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "NOVA"
+        },
+        {
+          "type": "check",
+          "name": "praise_available"
+        },
+        {
+          "type": "tap_area",
+          "target": "praise"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "nova_research",
+      "name": "Nova Research",
+      "area": "NOVA",
+      "aliases": [
+        "Nova Research"
+      ],
+      "cooldown_seconds": 7200,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "NOVA"
+        },
+        {
+          "type": "check",
+          "name": "research_available"
+        },
+        {
+          "type": "tap_area",
+          "target": "research"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "noah_tavern",
+      "name": "Noah Tavern",
+      "area": "NOAH_TAVERN",
+      "aliases": [
+        "Noah Tavern",
+        "Tavern Recruitment"
+      ],
+      "cooldown_seconds": 86400,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "NOAH_TAVERN"
+        },
+        {
+          "type": "check",
+          "name": "free_recruit_available"
+        },
+        {
+          "type": "tap_area",
+          "target": "free_recruit"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "radio_quiz",
+      "name": "Radio Quiz",
+      "area": "RADIO",
+      "aliases": [
+        "Radio Quiz"
+      ],
+      "cooldown_seconds": 86400,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "RADIO"
+        },
+        {
+          "type": "check",
+          "name": "quiz_available"
+        },
+        {
+          "type": "tap_area",
+          "target": "answer_or_skip"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "collect_base_resources",
+      "name": "Collect Base Resources + Antiserum Limit Confirm",
+      "area": "BASE",
+      "aliases": [
+        "Collect Base Resources",
+        "Base Resources"
+      ],
+      "cooldown_seconds": 1800,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "check",
+          "name": "base_screen_visible"
+        },
+        {
+          "type": "tap_area",
+          "target": "serum"
+        },
+        {
+          "type": "tap_area",
+          "target": "food"
+        },
+        {
+          "type": "tap_area",
+          "target": "wood"
+        },
+        {
+          "type": "tap_area",
+          "target": "steel"
+        },
+        {
+          "type": "tap_area",
+          "target": "gas"
+        },
+        {
+          "type": "tap_if_visible",
+          "target": "confirm_antiserum_limit"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "alliance_research",
+      "name": "Alliance > Research",
+      "area": "ALLIANCE",
+      "aliases": [
+        "Alliance Research",
+        "Alliance Donate",
+        "Alliance Tech"
+      ],
+      "cooldown_seconds": 14400,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {
+        "donate_until_limit": true
+      },
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "ALLIANCE"
+        },
+        {
+          "type": "open_screen",
+          "screen": "ALLIANCE_RESEARCH"
+        },
+        {
+          "type": "check",
+          "name": "research_donation_available"
+        },
+        {
+          "type": "tap_repeat_until",
+          "target": "donate",
+          "until": "donation_limit_or_no_resources",
+          "max_repeats": 10,
+          "repeat_delay_seconds": 0.75
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "alliance_gifts",
+      "name": "Alliance > Gifts",
+      "area": "ALLIANCE",
+      "aliases": [
+        "Alliance Gifts",
+        "Alliance Gift"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "ALLIANCE"
+        },
+        {
+          "type": "open_screen",
+          "screen": "ALLIANCE_GIFTS"
+        },
+        {
+          "type": "check",
+          "name": "gift_claim_available"
+        },
+        {
+          "type": "tap_repeat_until",
+          "target": "claim",
+          "until": "no_claim_buttons",
+          "max_repeats": 10,
+          "repeat_delay_seconds": 0.75
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "alliance_gathering",
+      "name": "Alliance > Gathering",
+      "area": "ALLIANCE",
+      "aliases": [
+        "Alliance Gathering",
+        "Alliance Gather"
+      ],
+      "cooldown_seconds": 7200,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "ALLIANCE"
+        },
+        {
+          "type": "open_screen",
+          "screen": "ALLIANCE_GATHERING"
+        },
+        {
+          "type": "check",
+          "name": "march_slot_available"
+        },
+        {
+          "type": "select_resource",
+          "resource": "best_available"
+        },
+        {
+          "type": "dispatch_if_march_slot_available"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "gather_speedup",
+      "name": "Buff > Gather Speedup + Gathering Search",
+      "area": "BUFFS",
+      "aliases": [
+        "Gather Speedup",
+        "Gathering Boost"
+      ],
+      "cooldown_seconds": 86400,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BUFFS"
+        },
+        {
+          "type": "check",
+          "name": "gather_speedup_available"
+        },
+        {
+          "type": "tap_area",
+          "target": "gather_speedup"
+        },
+        {
+          "type": "open_area",
+          "area": "SEARCH_MENU"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "shield",
+      "name": "Buff > Shield 2hr Everyday + Gathering Search",
+      "area": "BUFFS",
+      "aliases": [
+        "Shield",
+        "2hr Shield"
+      ],
+      "cooldown_seconds": 86400,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BUFFS"
+        },
+        {
+          "type": "check",
+          "name": "shield_needed"
+        },
+        {
+          "type": "tap_area",
+          "target": "shield"
+        },
+        {
+          "type": "select_option",
+          "value": "2hr"
+        },
+        {
+          "type": "confirm"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "resource_gathering",
+      "name": "Gathering Search Menu > Resource Gathering",
+      "area": "WORLD_MAP",
+      "aliases": [
+        "Resource Gathering",
+        "Gather Resources"
+      ],
+      "cooldown_seconds": 7200,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "SEARCH_MENU"
+        },
+        {
+          "type": "check",
+          "name": "march_slot_available"
+        },
+        {
+          "type": "select_resource",
+          "resource": "best_available"
+        },
+        {
+          "type": "tap_area",
+          "target": "search"
+        },
+        {
+          "type": "dispatch_if_march_slot_available"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "hq_upgrading",
+      "name": "Base > HQ Upgrade",
+      "area": "BASE",
+      "aliases": [
+        "Base > HQ Upgrade"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "hq_upgrading_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "hq_upgrading"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "building_upgrading",
+      "name": "Base > Building Upgrade",
+      "area": "BASE",
+      "aliases": [
+        "Base > Building Upgrade"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "building_upgrading_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "building_upgrading"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "research",
+      "name": "Base > Research",
+      "area": "BASE",
+      "aliases": [
+        "Base > Research"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "research_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "research"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "wall_repair",
+      "name": "Base > Wall Repair",
+      "area": "BASE",
+      "aliases": [
+        "Base > Wall Repair"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "wall_repair_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "wall_repair"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "trap_crafting",
+      "name": "Base > Trap Crafting",
+      "area": "BASE",
+      "aliases": [
+        "Base > Trap Crafting"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "trap_crafting_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "trap_crafting"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "troop_training",
+      "name": "Military > Troop Training",
+      "area": "BASE",
+      "aliases": [
+        "Military > Troop Training"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "troop_training_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "troop_training"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "troop_healing",
+      "name": "Military > Troop Healing",
+      "area": "BASE",
+      "aliases": [
+        "Military > Troop Healing"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "troop_healing_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "troop_healing"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "tavern_recruitment",
+      "name": "Noah Tavern Recruitment",
+      "area": "NOAH_TAVERN",
+      "aliases": [
+        "Noah Tavern Recruitment"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "NOAH_TAVERN"
+        },
+        {
+          "type": "check",
+          "name": "tavern_recruitment_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "tavern_recruitment"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "skills",
+      "name": "Commander Skills / Buffs",
+      "area": "BUFFS",
+      "aliases": [
+        "Commander Skills / Buffs"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BUFFS"
+        },
+        {
+          "type": "check",
+          "name": "skills_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "skills"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "game_gifts",
+      "name": "Collect Game Gifts",
+      "area": "QUESTS",
+      "aliases": [
+        "Collect Game Gifts"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "QUESTS"
+        },
+        {
+          "type": "check",
+          "name": "game_gifts_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "game_gifts"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "bag_items",
+      "name": "Bag Items / Inventory Cleanup",
+      "area": "BAG",
+      "aliases": [
+        "Bag Items / Inventory Cleanup"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BAG"
+        },
+        {
+          "type": "check",
+          "name": "bag_items_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "bag_items"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "supply_depot",
+      "name": "Supply Depot",
+      "area": "BASE",
+      "aliases": [
+        "Supply Depot"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "supply_depot_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "supply_depot"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "bank_investment",
+      "name": "Bank Investment",
+      "area": "BASE",
+      "aliases": [
+        "Bank Investment"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "bank_investment_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "bank_investment"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "ruins",
+      "name": "Ruins",
+      "area": "BASE",
+      "aliases": [
+        "Ruins"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "BASE"
+        },
+        {
+          "type": "check",
+          "name": "ruins_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "ruins"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "pit_gather",
+      "name": "Pit > Gather",
+      "area": "PIT",
+      "aliases": [
+        "Pit > Gather"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "PIT"
+        },
+        {
+          "type": "check",
+          "name": "pit_gather_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "pit_gather"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "pit_attack",
+      "name": "Pit > Attack",
+      "area": "PIT",
+      "aliases": [
+        "Pit > Attack"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "PIT"
+        },
+        {
+          "type": "check",
+          "name": "pit_attack_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "pit_attack"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "campaign_puzzle_auto",
+      "name": "Campaign Puzzle > Auto",
+      "area": "CAMPAIGN",
+      "aliases": [
+        "Campaign Puzzle > Auto"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "CAMPAIGN"
+        },
+        {
+          "type": "check",
+          "name": "campaign_puzzle_auto_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "campaign_puzzle_auto"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "campaign_puzzle_general",
+      "name": "Campaign Puzzle > General Best Move",
+      "area": "CAMPAIGN",
+      "aliases": [
+        "Campaign Puzzle > General Best Move"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "CAMPAIGN"
+        },
+        {
+          "type": "check",
+          "name": "campaign_puzzle_general_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "campaign_puzzle_general"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "dynamic_base_puzzles",
+      "name": "Dynamic Base Puzzles",
+      "area": "CAMPAIGN",
+      "aliases": [
+        "Dynamic Base Puzzles"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "CAMPAIGN"
+        },
+        {
+          "type": "check",
+          "name": "dynamic_base_puzzles_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "dynamic_base_puzzles"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "duel_survival",
+      "name": "Duel Survival",
+      "area": "CAMPAIGN",
+      "aliases": [
+        "Duel Survival"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "CAMPAIGN"
+        },
+        {
+          "type": "check",
+          "name": "duel_survival_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "duel_survival"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "zombies_40",
+      "name": "Zombies 40",
+      "area": "ZOMBIES",
+      "aliases": [
+        "Zombies 40"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "ZOMBIES"
+        },
+        {
+          "type": "check",
+          "name": "zombies_40_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "zombies_40"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    },
+    {
+      "id": "quest_rewards",
+      "name": "Collect Quest Rewards",
+      "area": "QUESTS",
+      "aliases": [
+        "Collect Quest Rewards"
+      ],
+      "cooldown_seconds": 3600,
+      "prechecks": [
+        "where_am_i",
+        "cooldown_ready",
+        "screen_safe"
+      ],
+      "options": {},
+      "query_loop": [
+        {
+          "type": "check",
+          "name": "where_am_i"
+        },
+        {
+          "type": "check",
+          "name": "cooldown_ready"
+        },
+        {
+          "type": "open_area",
+          "area": "QUESTS"
+        },
+        {
+          "type": "check",
+          "name": "quest_rewards_available"
+        },
+        {
+          "type": "run_task_branch",
+          "branch": "quest_rewards"
+        },
+        {
+          "type": "on_success",
+          "action": "set_cooldown"
+        }
+      ],
+      "version": "v1.33.7a"
+    }
+  ],
+  "queues": {
+    "default_6_queue": [
+      [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "alliance_gathering",
+        "gather_speedup",
+        "shield",
+        "resource_gathering"
+      ],
+      [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "hq_upgrading",
+        "building_upgrading",
+        "research",
+        "wall_repair",
+        "trap_crafting",
+        "troop_training"
+      ],
+      [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "troop_healing",
+        "tavern_recruitment",
+        "skills",
+        "game_gifts",
+        "bag_items",
+        "supply_depot"
+      ],
+      [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "bank_investment",
+        "ruins",
+        "pit_gather",
+        "pit_attack",
+        "campaign_puzzle_auto"
+      ],
+      [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "campaign_puzzle_general",
+        "dynamic_base_puzzles",
+        "duel_survival",
+        "zombies_40",
+        "quest_rewards"
+      ],
+      [
+        "speedup_help",
+        "nova_daily_praise",
+        "nova_research",
+        "noah_tavern",
+        "radio_quiz",
+        "collect_base_resources",
+        "alliance_research",
+        "alliance_gifts",
+        "zombies_40",
+        "quest_rewards"
+      ]
+    ]
+  },
+  "jar_derived_api": {
+    "classes": [
+      "PASAlliance",
+      "PASDailyToDoMenu",
+      "PASDispatch",
+      "PASMarch",
+      "PASMenu",
+      "PASViewport",
+      "PASSearchMenu",
+      "PASAutoUseResource",
+      "PASBuildingUpgrading"
+    ],
+    "image_groups": {
+      "Alliance": {
+        "base": "pas/alliance/",
+        "stems": []
+      },
+      "AutoUseResource": {
+        "base": "pas/rss_use/",
+        "stems": [
+          "confirm",
+          "head",
+          "insufficient"
+        ]
+      },
+      "BuildingUpgrading": {
+        "base": "pas/upgrading/",
+        "stems": [
+          "extra",
+          "extra2",
+          "free",
+          "glory",
+          "go",
+          "help",
+          "hint",
+          "hq_req",
+          "niq",
+          "reqs",
+          "su",
+          "su2",
+          "time",
+          "u1",
+          "u2",
+          "u3"
+        ]
+      },
+      "CampaignPuzzle": {
+        "base": "pas/campaign_puzzle/",
+        "stems": [
+          "auto",
+          "grenade1",
+          "grenade2",
+          "grenade3",
+          "grenade4",
+          "moves",
+          "su"
+        ]
+      },
+      "ChestPuzzle": {
+        "base": "pas/chest_puzzle/",
+        "stems": [
+          "chest"
+        ]
+      },
+      "DailyToDo": {
+        "base": "pas/dtd/",
+        "stems": [
+          "btn",
+          "head"
+        ]
+      },
+      "Dialogue": {
+        "base": "pas/dialogue/",
+        "stems": [
+          "amber",
+          "amber2",
+          "city",
+          "fox",
+          "maverick",
+          "maverick2",
+          "nova",
+          "you"
+        ]
+      },
+      "Dispatch": {
+        "base": "pas/dispatch/",
+        "stems": [
+          "dispatch",
+          "qs"
+        ]
+      },
+      "GameAssistant": {
+        "base": "pas/assistant/",
+        "stems": [
+          "1",
+          "2",
+          "3",
+          "btn",
+          "dsa",
+          "dsax",
+          "header",
+          "pop1",
+          "pop2",
+          "pop3",
+          "x"
+        ]
+      },
+      "Loading": {
+        "base": "pas/loading/",
+        "stems": [
+          "dsa",
+          "logo",
+          "logo2",
+          "maint",
+          "title"
+        ]
+      },
+      "March": {
+        "base": "pas/march/",
+        "stems": [
+          "arrival_time",
+          "boost_details",
+          "clear_hero",
+          "dispatch",
+          "full",
+          "no_units",
+          "obtain",
+          "quick_select",
+          "rec_hero"
+        ]
+      },
+      "Menu": {
+        "base": "pas/menu/",
+        "stems": [
+          "back"
+        ]
+      },
+      "Search": {
+        "base": "pas/search/",
+        "stems": [
+          "minus",
+          "opt",
+          "plus",
+          "search",
+          "slider"
+        ]
+      },
+      "Slider": {
+        "base": "pas/slider/",
+        "stems": [
+          "confirm",
+          "header",
+          "minus",
+          "plus",
+          "slider",
+          "use"
+        ]
+      },
+      "Viewport": {
+        "base": "pas/viewport/",
+        "stems": [
+          "base",
+          "boosts",
+          "boosts2",
+          "boosts3",
+          "boosts4",
+          "campaign_back",
+          "campaign_leave",
+          "dc",
+          "expand",
+          "gift_center",
+          "hospital",
+          "map",
+          "minimize",
+          "popup1",
+          "popup2",
+          "settings"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+# LSSBot JAR Asset Report
+
+Result: no `pas.xapk` entry was found inside the uploaded `lssbot5.jar`. The JAR contains UI assets under `com/lssbot/assets/*`, but the PAS game-recognition sprites referenced by `PASImageAddress` are not embedded as files in the JAR.
+
+## PAS image groups referenced by classes
+
+- `Alliance` → `pas/alliance/` stems: ``
+- `AutoUseResource` → `pas/rss_use/` stems: `confirm, head, insufficient`
+- `BuildingUpgrading` → `pas/upgrading/` stems: `extra, extra2, free, glory, go, help, hint, hq_req, niq, reqs, su, su2, time, u1, u2, u3`
+- `CampaignPuzzle` → `pas/campaign_puzzle/` stems: `auto, grenade1, grenade2, grenade3, grenade4, moves, su`
+- `ChestPuzzle` → `pas/chest_puzzle/` stems: `chest`
+- `DailyToDo` → `pas/dtd/` stems: `btn, head`
+- `Dialogue` → `pas/dialogue/` stems: `amber, amber2, city, fox, maverick, maverick2, nova, you`
+- `Dispatch` → `pas/dispatch/` stems: `dispatch, qs`
+- `GameAssistant` → `pas/assistant/` stems: `1, 2, 3, btn, dsa, dsax, header, pop1, pop2, pop3, x`
+- `Loading` → `pas/loading/` stems: `dsa, logo, logo2, maint, title`
+- `March` → `pas/march/` stems: `arrival_time, boost_details, clear_hero, dispatch, full, no_units, obtain, quick_select, rec_hero`
+- `Menu` → `pas/menu/` stems: `back`
+- `Search` → `pas/search/` stems: `minus, opt, plus, search, slider`
+- `Slider` → `pas/slider/` stems: `confirm, header, minus, plus, slider, use`
+- `Viewport` → `pas/viewport/` stems: `base, boosts, boosts2, boosts3, boosts4, campaign_back, campaign_leave, dc, expand, gift_center, hospital, map, minimize, popup1, popup2, settings`
+
+## Missing files to provide
+
+- AutoUseResource: save one of `pas/rss_use/confirm.png`, `pas/rss_use/confirm.webp`, `pas/rss_use/confirm.jpg` under `assets/pas/rss_use/`
+- AutoUseResource: save one of `pas/rss_use/head.png`, `pas/rss_use/head.webp`, `pas/rss_use/head.jpg` under `assets/pas/rss_use/`
+- AutoUseResource: save one of `pas/rss_use/insufficient.png`, `pas/rss_use/insufficient.webp`, `pas/rss_use/insufficient.jpg` under `assets/pas/rss_use/`
+- BuildingUpgrading: save one of `pas/upgrading/extra.png`, `pas/upgrading/extra.webp`, `pas/upgrading/extra.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/extra2.png`, `pas/upgrading/extra2.webp`, `pas/upgrading/extra2.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/free.png`, `pas/upgrading/free.webp`, `pas/upgrading/free.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/glory.png`, `pas/upgrading/glory.webp`, `pas/upgrading/glory.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/go.png`, `pas/upgrading/go.webp`, `pas/upgrading/go.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/help.png`, `pas/upgrading/help.webp`, `pas/upgrading/help.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/hint.png`, `pas/upgrading/hint.webp`, `pas/upgrading/hint.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/hq_req.png`, `pas/upgrading/hq_req.webp`, `pas/upgrading/hq_req.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/niq.png`, `pas/upgrading/niq.webp`, `pas/upgrading/niq.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/reqs.png`, `pas/upgrading/reqs.webp`, `pas/upgrading/reqs.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/su.png`, `pas/upgrading/su.webp`, `pas/upgrading/su.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/su2.png`, `pas/upgrading/su2.webp`, `pas/upgrading/su2.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/time.png`, `pas/upgrading/time.webp`, `pas/upgrading/time.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/u1.png`, `pas/upgrading/u1.webp`, `pas/upgrading/u1.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/u2.png`, `pas/upgrading/u2.webp`, `pas/upgrading/u2.jpg` under `assets/pas/upgrading/`
+- BuildingUpgrading: save one of `pas/upgrading/u3.png`, `pas/upgrading/u3.webp`, `pas/upgrading/u3.jpg` under `assets/pas/upgrading/`
+- CampaignPuzzle: save one of `pas/campaign_puzzle/auto.png`, `pas/campaign_puzzle/auto.webp`, `pas/campaign_puzzle/auto.jpg` under `assets/pas/campaign_puzzle/`
+- CampaignPuzzle: save one of `pas/campaign_puzzle/grenade1.png`, `pas/campaign_puzzle/grenade1.webp`, `pas/campaign_puzzle/grenade1.jpg` under `assets/pas/campaign_puzzle/`
+- CampaignPuzzle: save one of `pas/campaign_puzzle/grenade2.png`, `pas/campaign_puzzle/grenade2.webp`, `pas/campaign_puzzle/grenade2.jpg` under `assets/pas/campaign_puzzle/`
+- CampaignPuzzle: save one of `pas/campaign_puzzle/grenade3.png`, `pas/campaign_puzzle/grenade3.webp`, `pas/campaign_puzzle/grenade3.jpg` under `assets/pas/campaign_puzzle/`
+- CampaignPuzzle: save one of `pas/campaign_puzzle/grenade4.png`, `pas/campaign_puzzle/grenade4.webp`, `pas/campaign_puzzle/grenade4.jpg` under `assets/pas/campaign_puzzle/`
+- CampaignPuzzle: save one of `pas/campaign_puzzle/moves.png`, `pas/campaign_puzzle/moves.webp`, `pas/campaign_puzzle/moves.jpg` under `assets/pas/campaign_puzzle/`
+- CampaignPuzzle: save one of `pas/campaign_puzzle/su.png`, `pas/campaign_puzzle/su.webp`, `pas/campaign_puzzle/su.jpg` under `assets/pas/campaign_puzzle/`
+- ChestPuzzle: save one of `pas/chest_puzzle/chest.png`, `pas/chest_puzzle/chest.webp`, `pas/chest_puzzle/chest.jpg` under `assets/pas/chest_puzzle/`
+- DailyToDo: save one of `pas/dtd/btn.png`, `pas/dtd/btn.webp`, `pas/dtd/btn.jpg` under `assets/pas/dtd/`
+- DailyToDo: save one of `pas/dtd/head.png`, `pas/dtd/head.webp`, `pas/dtd/head.jpg` under `assets/pas/dtd/`
+- Dialogue: save one of `pas/dialogue/amber.png`, `pas/dialogue/amber.webp`, `pas/dialogue/amber.jpg` under `assets/pas/dialogue/`
+- Dialogue: save one of `pas/dialogue/amber2.png`, `pas/dialogue/amber2.webp`, `pas/dialogue/amber2.jpg` under `assets/pas/dialogue/`
+- Dialogue: save one of `pas/dialogue/city.png`, `pas/dialogue/city.webp`, `pas/dialogue/city.jpg` under `assets/pas/dialogue/`
+- Dialogue: save one of `pas/dialogue/fox.png`, `pas/dialogue/fox.webp`, `pas/dialogue/fox.jpg` under `assets/pas/dialogue/`
+- Dialogue: save one of `pas/dialogue/maverick.png`, `pas/dialogue/maverick.webp`, `pas/dialogue/maverick.jpg` under `assets/pas/dialogue/`
+- Dialogue: save one of `pas/dialogue/maverick2.png`, `pas/dialogue/maverick2.webp`, `pas/dialogue/maverick2.jpg` under `assets/pas/dialogue/`
+- Dialogue: save one of `pas/dialogue/nova.png`, `pas/dialogue/nova.webp`, `pas/dialogue/nova.jpg` under `assets/pas/dialogue/`
+- Dialogue: save one of `pas/dialogue/you.png`, `pas/dialogue/you.webp`, `pas/dialogue/you.jpg` under `assets/pas/dialogue/`
+- Dispatch: save one of `pas/dispatch/dispatch.png`, `pas/dispatch/dispatch.webp`, `pas/dispatch/dispatch.jpg` under `assets/pas/dispatch/`
+- Dispatch: save one of `pas/dispatch/qs.png`, `pas/dispatch/qs.webp`, `pas/dispatch/qs.jpg` under `assets/pas/dispatch/`
+- GameAssistant: save one of `pas/assistant/1.png`, `pas/assistant/1.webp`, `pas/assistant/1.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/2.png`, `pas/assistant/2.webp`, `pas/assistant/2.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/3.png`, `pas/assistant/3.webp`, `pas/assistant/3.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/btn.png`, `pas/assistant/btn.webp`, `pas/assistant/btn.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/dsa.png`, `pas/assistant/dsa.webp`, `pas/assistant/dsa.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/dsax.png`, `pas/assistant/dsax.webp`, `pas/assistant/dsax.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/header.png`, `pas/assistant/header.webp`, `pas/assistant/header.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/pop1.png`, `pas/assistant/pop1.webp`, `pas/assistant/pop1.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/pop2.png`, `pas/assistant/pop2.webp`, `pas/assistant/pop2.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/pop3.png`, `pas/assistant/pop3.webp`, `pas/assistant/pop3.jpg` under `assets/pas/assistant/`
+- GameAssistant: save one of `pas/assistant/x.png`, `pas/assistant/x.webp`, `pas/assistant/x.jpg` under `assets/pas/assistant/`
+- Loading: save one of `pas/loading/dsa.png`, `pas/loading/dsa.webp`, `pas/loading/dsa.jpg` under `assets/pas/loading/`
+- Loading: save one of `pas/loading/logo.png`, `pas/loading/logo.webp`, `pas/loading/logo.jpg` under `assets/pas/loading/`
+- Loading: save one of `pas/loading/logo2.png`, `pas/loading/logo2.webp`, `pas/loading/logo2.jpg` under `assets/pas/loading/`
+- Loading: save one of `pas/loading/maint.png`, `pas/loading/maint.webp`, `pas/loading/maint.jpg` under `assets/pas/loading/`
+- Loading: save one of `pas/loading/title.png`, `pas/loading/title.webp`, `pas/loading/title.jpg` under `assets/pas/loading/`
+- March: save one of `pas/march/arrival_time.png`, `pas/march/arrival_time.webp`, `pas/march/arrival_time.jpg` under `assets/pas/march/`
+- March: save one of `pas/march/boost_details.png`, `pas/march/boost_details.webp`, `pas/march/boost_details.jpg` under `assets/pas/march/`
+- March: save one of `pas/march/clear_hero.png`, `pas/march/clear_hero.webp`, `pas/march/clear_hero.jpg` under `assets/pas/march/`
+- March: save one of `pas/march/dispatch.png`, `pas/march/dispatch.webp`, `pas/march/dispatch.jpg` under `assets/pas/march/`
+- March: save one of `pas/march/full.png`, `pas/march/full.webp`, `pas/march/full.jpg` under `assets/pas/march/`
+- March: save one of `pas/march/no_units.png`, `pas/march/no_units.webp`, `pas/march/no_units.jpg` under `assets/pas/march/`
+- March: save one of `pas/march/obtain.png`, `pas/march/obtain.webp`, `pas/march/obtain.jpg` under `assets/pas/march/`
+- March: save one of `pas/march/quick_select.png`, `pas/march/quick_select.webp`, `pas/march/quick_select.jpg` under `assets/pas/march/`
+- March: save one of `pas/march/rec_hero.png`, `pas/march/rec_hero.webp`, `pas/march/rec_hero.jpg` under `assets/pas/march/`
+- Menu: save one of `pas/menu/back.png`, `pas/menu/back.webp`, `pas/menu/back.jpg` under `assets/pas/menu/`
+- Search: save one of `pas/search/minus.png`, `pas/search/minus.webp`, `pas/search/minus.jpg` under `assets/pas/search/`
+- Search: save one of `pas/search/opt.png`, `pas/search/opt.webp`, `pas/search/opt.jpg` under `assets/pas/search/`
+- Search: save one of `pas/search/plus.png`, `pas/search/plus.webp`, `pas/search/plus.jpg` under `assets/pas/search/`
+- Search: save one of `pas/search/search.png`, `pas/search/search.webp`, `pas/search/search.jpg` under `assets/pas/search/`
+- Search: save one of `pas/search/slider.png`, `pas/search/slider.webp`, `pas/search/slider.jpg` under `assets/pas/search/`
+- Slider: save one of `pas/slider/confirm.png`, `pas/slider/confirm.webp`, `pas/slider/confirm.jpg` under `assets/pas/slider/`
+- Slider: save one of `pas/slider/header.png`, `pas/slider/header.webp`, `pas/slider/header.jpg` under `assets/pas/slider/`
+- Slider: save one of `pas/slider/minus.png`, `pas/slider/minus.webp`, `pas/slider/minus.jpg` under `assets/pas/slider/`
+- Slider: save one of `pas/slider/plus.png`, `pas/slider/plus.webp`, `pas/slider/plus.jpg` under `assets/pas/slider/`
+- Slider: save one of `pas/slider/slider.png`, `pas/slider/slider.webp`, `pas/slider/slider.jpg` under `assets/pas/slider/`
+- Slider: save one of `pas/slider/use.png`, `pas/slider/use.webp`, `pas/slider/use.jpg` under `assets/pas/slider/`
+- Viewport: save one of `pas/viewport/base.png`, `pas/viewport/base.webp`, `pas/viewport/base.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/boosts.png`, `pas/viewport/boosts.webp`, `pas/viewport/boosts.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/boosts2.png`, `pas/viewport/boosts2.webp`, `pas/viewport/boosts2.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/boosts3.png`, `pas/viewport/boosts3.webp`, `pas/viewport/boosts3.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/boosts4.png`, `pas/viewport/boosts4.webp`, `pas/viewport/boosts4.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/campaign_back.png`, `pas/viewport/campaign_back.webp`, `pas/viewport/campaign_back.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/campaign_leave.png`, `pas/viewport/campaign_leave.webp`, `pas/viewport/campaign_leave.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/dc.png`, `pas/viewport/dc.webp`, `pas/viewport/dc.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/expand.png`, `pas/viewport/expand.webp`, `pas/viewport/expand.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/gift_center.png`, `pas/viewport/gift_center.webp`, `pas/viewport/gift_center.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/hospital.png`, `pas/viewport/hospital.webp`, `pas/viewport/hospital.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/map.png`, `pas/viewport/map.webp`, `pas/viewport/map.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/minimize.png`, `pas/viewport/minimize.webp`, `pas/viewport/minimize.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/popup1.png`, `pas/viewport/popup1.webp`, `pas/viewport/popup1.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/popup2.png`, `pas/viewport/popup2.webp`, `pas/viewport/popup2.jpg` under `assets/pas/viewport/`
+- Viewport: save one of `pas/viewport/settings.png`, `pas/viewport/settings.webp`, `pas/viewport/settings.jpg` under `assets/pas/viewport/`
