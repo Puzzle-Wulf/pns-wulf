@@ -1,0 +1,49 @@
+name: Analyze official game assets
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/analyze-game-assets.yml"
+      - "tools/analyze_game_sources.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify 7-Zip
+        run: 7z | head -n 3
+
+      - name: Download official APK
+        run: |
+          curl --fail --location --retry 3 --retry-delay 2 \
+            "https://d2ex983vwhbc52.cloudfront.net/exe/2026/07/10/140316/com.global.ztmslg.website_0708.apk" \
+            --output /tmp/pns-official.apk
+          ls -lh /tmp/pns-official.apk
+          sha256sum /tmp/pns-official.apk
+
+      - name: Analyze APK, website and discovered Windows client
+        run: |
+          python tools/analyze_game_sources.py \
+            --apk /tmp/pns-official.apk \
+            --site-url "https://www.pnsofficial.com/pnsofficial/ztmslg/" \
+            --inspect-client \
+            --out runtime/game-source-analysis
+          sed -n '1,260p' runtime/game-source-analysis/analysis.md
+
+      - name: Upload reports only
+        uses: actions/upload-artifact@v4
+        with:
+          name: game-source-analysis
+          path: |
+            runtime/game-source-analysis/analysis.json
+            runtime/game-source-analysis/analysis.md
+          if-no-files-found: error
+          retention-days: 7
