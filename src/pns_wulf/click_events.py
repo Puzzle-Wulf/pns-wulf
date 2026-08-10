@@ -93,6 +93,7 @@ class ClickEventRegistry:
         self.set_template(name, str(target), threshold)
         data = self.load()
         event = data.setdefault("events", {}).setdefault(name, {})
+        event.pop("coordinate", None)
         event["capture"] = {
             "source": str(source),
             "region": list(selected),
