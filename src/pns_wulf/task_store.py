@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shlex
 import shutil
 from pathlib import Path
 
@@ -152,7 +153,7 @@ def queue_clear(name: str | None) -> None:
     log("QUEUE CLEAR", name, GREEN)
 
 
-def task_recorder() -> None:
+def task_recorder(config: dict | None = None) -> None:
     def empty(task_id: str = "") -> dict:
         return {
             "version": VERSION,
@@ -168,7 +169,8 @@ def task_recorder() -> None:
     record = empty()
     RECORDINGS_DIR.mkdir(exist_ok=True)
     print("task-recorder> new <id> | name <text> | area <AREA> | alias <text> | cooldown <sec>")
-    print("               screen <SCREEN> | check <name> | tap <x> <y> <name> | tap-event <target> | note <text> | show | save | quit")
+    print("               screen <SCREEN> | check <name> | tap <x> <y> <name> | tap-event <target>")
+    print("               image <target> [screenshot] [x,y,w,h] | note <text> | show | save | quit")
     while True:
         try:
             command = input("task-recorder> ").strip()
@@ -197,6 +199,31 @@ def task_recorder() -> None:
         elif lower.startswith("tap "):
             parts = command.split(maxsplit=3)
             record["query_loop"].append({"type": "tap", "x": int(parts[1]), "y": int(parts[2]), "name": parts[3] if len(parts) > 3 else ""})
+        elif lower.startswith("image "):
+            try:
+                from .adb import ADBDevice
+                from .click_events import ClickEventRegistry
+                from .screenshots import capture_runtime
+                from .template_capture import parse_region
+
+                parts = shlex.split(command)
+                if len(parts) < 2 or len(parts) > 4:
+                    raise ValueError("Syntax: image <target> [screenshot|-] [x,y,w,h]")
+                target = parts[1]
+                screenshot = None if len(parts) < 3 or parts[2] == "-" else expand_path(parts[2])
+                region = parse_region(parts[3]) if len(parts) == 4 else None
+                if screenshot is None:
+                    if not config:
+                        raise RuntimeError("Live-Screenshot benötigt eine geladene PNS-Wulf-Konfiguration")
+                    device = ADBDevice(config["adb_path"], config["serial"])
+                    screenshot = capture_runtime(device, config.get("screenshots_dir"), prefix="task-template")
+                registry_path = expand_path(config.get("click_events_file", "config/click_events.json")) if config else None
+                registry = ClickEventRegistry(registry_path) if registry_path else ClickEventRegistry()
+                event = registry.create_template_from_screenshot(target, screenshot, region)
+                record["query_loop"].append({"type": "tap_area", "target": target})
+                print("image saved", event.get("template"), "-> tap_area", target)
+            except Exception as exc:
+                print("image error:", exc)
         elif lower.startswith("note "):
             record["query_loop"].append({"type": "note", "text": command[5:].strip()})
         elif lower == "show":
