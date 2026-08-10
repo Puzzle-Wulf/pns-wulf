@@ -38,6 +38,59 @@ jobs:
             --out runtime/game-source-analysis
           sed -n '1,260p' runtime/game-source-analysis/analysis.md
 
+      - name: Inspect packed Unity asset containers
+        run: |
+          mkdir -p /tmp/pns-packed runtime/game-source-analysis
+          unzip -q /tmp/pns-official.apk 'assets/ABAsset.pkglzma_*' 'assets/ABAsset/*' 'assets/bin/Data/Managed/Metadata/global-metadata.dat' -d /tmp/pns-packed
+          python - <<'PY' > runtime/game-source-analysis/deep-static.txt
+          from __future__ import annotations
+          import lzma
+          import pathlib
+          import struct
+          import subprocess
+
+          root = pathlib.Path('/tmp/pns-packed')
+          packed = sorted((root / 'assets').glob('ABAsset.pkglzma_*'))
+          print('PACKED_COUNT', len(packed))
+          for path in packed:
+              data = path.read_bytes()
+              print('\nFILE', path.name, 'SIZE', len(data))
+              print('HEAD_HEX', data[:96].hex())
+              if len(data) >= 8:
+                  print('U32_LE', struct.unpack('<II', data[:8]))
+                  print('U32_BE', struct.unpack('>II', data[:8]))
+              for offset in range(0, 17):
+                  for fmt_name, fmt in [('AUTO', lzma.FORMAT_AUTO), ('ALONE', lzma.FORMAT_ALONE), ('XZ', lzma.FORMAT_XZ)]:
+                      try:
+                          out = lzma.decompress(data[offset:], format=fmt)
+                      except Exception:
+                          continue
+                      print('LZMA_OK', 'offset', offset, 'format', fmt_name, 'out_size', len(out), 'out_head', out[:64].hex())
+                      break
+                  else:
+                      continue
+                  break
+              try:
+                  proc = subprocess.run(['7z', 'l', str(path)], text=True, capture_output=True, timeout=30)
+                  print('7Z_RC', proc.returncode)
+                  print(proc.stdout[-2500:])
+                  if proc.stderr:
+                      print(proc.stderr[-1000:])
+              except Exception as exc:
+                  print('7Z_ERROR', repr(exc))
+
+          metadata = root / 'assets/bin/Data/Managed/Metadata/global-metadata.dat'
+          if metadata.exists():
+              print('\nGLOBAL_METADATA_SIZE', metadata.stat().st_size)
+              proc = subprocess.run(['strings', '-a', '-n', '5', str(metadata)], text=True, capture_output=True, timeout=120)
+              terms = ('ABAsset', 'PackageUnCompress', 'persistentDataPath', 'StreamingAssets', 'ResourcesData', 'pkglzma', 'MulDownLoadRes')
+              matches = [line for line in proc.stdout.splitlines() if any(term.lower() in line.lower() for term in terms)]
+              print('GLOBAL_METADATA_MATCHES', len(matches))
+              for line in matches[:1000]:
+                  print(line)
+          PY
+          sed -n '1,520p' runtime/game-source-analysis/deep-static.txt
+
       - name: Upload reports only
         uses: actions/upload-artifact@v4
         with:
@@ -45,5 +98,6 @@ jobs:
           path: |
             runtime/game-source-analysis/analysis.json
             runtime/game-source-analysis/analysis.md
+            runtime/game-source-analysis/deep-static.txt
           if-no-files-found: error
           retention-days: 7
