@@ -3,7 +3,6 @@
 pns-bot text eol=lf
 *.py text eol=lf
 *.md text eol=lf
-
 # Git LFS: large binary artifacts
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.7z filter=lfs diff=lfs merge=lfs -text
