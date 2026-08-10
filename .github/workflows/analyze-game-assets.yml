@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/analyze-game-assets.yml"
       - "tools/analyze_game_sources.py"
+      - "tools/extract_pns_unity_assets.py"
   workflow_dispatch:
 
 permissions:
@@ -91,6 +92,29 @@ jobs:
           PY
           sed -n '1,520p' runtime/game-source-analysis/deep-static.txt
 
+      - name: Verify UnityPy can inventory a stripped bundle
+        run: |
+          python -m pip install --quiet UnityPy Pillow
+          python tools/extract_pns_unity_assets.py /tmp/pns-official.apk \
+            --out runtime/game-source-analysis/unity-extract-probe \
+            --max-packages 1
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('runtime/game-source-analysis/unity-extract-probe/extract-report.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          unity = data.get('unity', {})
+          print('BUNDLES', data.get('bundle_count'))
+          print('IMAGE_OBJECTS', unity.get('image_object_count'))
+          print('OBJECT_TYPES', unity.get('object_types'))
+          print('SAMPLE_IMAGES')
+          for row in unity.get('images', [])[:80]:
+              print(row)
+          print('FAILURES', len(unity.get('failures', [])))
+          for row in unity.get('failures', [])[:20]:
+              print(row)
+          PY
+
       - name: Upload reports only
         uses: actions/upload-artifact@v4
         with:
@@ -99,5 +123,6 @@ jobs:
             runtime/game-source-analysis/analysis.json
             runtime/game-source-analysis/analysis.md
             runtime/game-source-analysis/deep-static.txt
+            runtime/game-source-analysis/unity-extract-probe/extract-report.json
           if-no-files-found: error
           retention-days: 7
