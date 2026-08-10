@@ -12,6 +12,7 @@ from .configuration import CLICK_EXAMPLE, CLICK_FILE
 from .constants import VERSION
 from .paths import PROJECT_ROOT, expand_path
 from .screenshots import capture_destination, capture_runtime
+from .template_capture import crop_template
 from .util import BAD, GREEN, WARN, load_json, log, write_json
 
 
@@ -77,6 +78,27 @@ class ClickEventRegistry:
         event["template"] = str(destination.relative_to(PROJECT_ROOT)).replace("\\", "/")
         if threshold is not None:
             event["threshold"] = float(threshold)
+        self.save(data)
+        return event
+
+    def create_template_from_screenshot(
+        self,
+        name: str,
+        screenshot: str | Path,
+        region: tuple[int, int, int, int] | None = None,
+        threshold: float | None = None,
+    ) -> dict:
+        source = expand_path(screenshot)
+        target, selected, source_size = crop_template(source, name, region)
+        self.set_template(name, str(target), threshold)
+        data = self.load()
+        event = data.setdefault("events", {}).setdefault(name, {})
+        event.pop("coordinate", None)
+        event["capture"] = {
+            "source": str(source),
+            "region": list(selected),
+            "source_size": list(source_size),
+        }
         self.save(data)
         return event
 

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shlex
 import shutil
 from pathlib import Path
 
@@ -152,7 +153,115 @@ def queue_clear(name: str | None) -> None:
     log("QUEUE CLEAR", name, GREEN)
 
 
-def task_recorder() -> None:
+def numeric_text_value(value: str) -> str:
+    value = str(value or "").strip()
+    if not value or not value.isdigit():
+        raise ValueError("Text-Input muss ausschließlich aus Ziffern bestehen")
+    return value
+
+
+def make_scroll_step(
+    direction: str,
+    distance: float = 0.60,
+    duration_ms: int = 450,
+) -> dict:
+    direction = str(direction or "down").strip().lower()
+    if direction not in {"up", "down", "left", "right"}:
+        raise ValueError("Scroll-Richtung muss up, down, left oder right sein")
+    distance = float(distance)
+    if not 0.10 <= distance <= 0.80:
+        raise ValueError("Scroll-Distanz muss zwischen 0.10 und 0.80 liegen")
+    return {
+        "type": "scroll",
+        "direction": direction,
+        "distance": distance,
+        "duration_ms": max(1, int(duration_ms)),
+    }
+
+
+def _ensure_guided_identity(record: dict, empty) -> dict:
+    if record.get("id"):
+        return record
+    task_id = input("Task-ID: ").strip()
+    if not task_id:
+        raise ValueError("Task-ID darf nicht leer sein")
+    record = empty(task_id)
+    name = input("Task-Name (optional): ").strip()
+    area = input("Area (optional): ").strip()
+    if name:
+        record["name"] = name
+    if area:
+        record["area"] = area.upper()
+    return record
+
+
+def _save_record(record: dict) -> Path:
+    if not record.get("id"):
+        raise ValueError("Task-ID fehlt")
+    path = RECORDINGS_DIR / (record["id"] + ".task.json")
+    write_json(path, record)
+    print("saved", path)
+    return path
+
+
+def _guided_tap(config: dict | None, record: dict) -> None:
+    if not config:
+        raise RuntimeError("Tap-Aufnahme benötigt eine geladene PNS-Wulf-Konfiguration")
+
+    from .adb import ADBDevice
+    from .click_events import ClickEventRegistry
+    from .screenshots import capture_runtime
+    from .touch_capture import TouchCaptureUnavailable, capture_two_finger_region
+
+    target = input("Tap-Asset/Target: ").strip()
+    if not target:
+        raise ValueError("Tap-Target darf nicht leer sein")
+
+    device = ADBDevice(config["adb_path"], config["serial"])
+    registry = ClickEventRegistry(
+        expand_path(config.get("click_events_file", "config/click_events.json"))
+    )
+
+    try:
+        screenshot, region, touch_meta = capture_two_finger_region(
+            device,
+            config.get("screenshots_dir"),
+            prefix="task-touch-template",
+        )
+        event = registry.create_template_from_screenshot(target, screenshot, region)
+        data = registry.load()
+        capture = data.setdefault("events", {}).setdefault(target, {}).setdefault("capture", {})
+        capture.update(touch_meta)
+        registry.save(data)
+        event = registry.get(target)
+        print("2-finger image saved", event.get("template"), "-> tap_area", target)
+    except (TouchCaptureUnavailable, ValueError) as exc:
+        print("2-Finger-Auswahl nicht verfügbar:", exc)
+        print("Fallback: Screenshot wird geöffnet; Bereich mit der Maus markieren und Enter drücken.")
+        screenshot = capture_runtime(
+            device,
+            config.get("screenshots_dir"),
+            prefix="task-template-fallback",
+        )
+        event = registry.create_template_from_screenshot(target, screenshot, None)
+        print("image saved", event.get("template"), "-> tap_area", target)
+
+    record["query_loop"].append({"type": "tap_area", "target": target})
+
+
+def _guided_scroll(record: dict) -> None:
+    direction = input("Scroll-Richtung [down/up/left/right] (down): ").strip().lower() or "down"
+    record["query_loop"].append(make_scroll_step(direction))
+    print("scroll added", direction)
+
+
+def _guided_text(record: dict) -> None:
+    value = numeric_text_value(input("Zahl eingeben: "))
+    record["query_loop"].append({"type": "text_input", "value": value})
+    print("text_input added", value)
+
+
+def task_recorder(config: dict | None = None) -> None:
     def empty(task_id: str = "") -> dict:
         return {
             "version": VERSION,
@@ -167,17 +276,61 @@ def task_recorder() -> None:
 
     record = empty()
     RECORDINGS_DIR.mkdir(exist_ok=True)
+
+    print("Geführter Task Builder: tap | scroll | text")
+    print("Für den bisherigen Kommandomodus: advanced")
+    try:
+        first = input("Was soll der erste Schritt tun? [tap/scroll/text/advanced]: ").strip().lower()
+    except KeyboardInterrupt:
+        print()
+        return
+
+    guided = first in {"tap", "scroll", "text"}
+    pending = first if guided else ""
     print("task-recorder> new <id> | name <text> | area <AREA> | alias <text> | cooldown <sec>")
-    print("               screen <SCREEN> | check <name> | tap <x> <y> <name> | tap-event <target> | note <text> | show | save | quit")
+    print("               screen <SCREEN> | check <name> | tap <x> <y> <name> | tap-event <target>")
+    print("               image <target> [screenshot] [x,y,w,h] | scroll <dir> [distance] [ms] | text <digits>")
+    print("               tap | scroll | text | advanced | note <text> | show | save | done | quit")
+
     while True:
         try:
-            command = input("task-recorder> ").strip()
+            if pending:
+                command = pending
+                pending = ""
+            else:
+                prompt = "next-step> " if guided else "task-recorder> "
+                command = input(prompt).strip()
         except KeyboardInterrupt:
             print()
             continue
+
         lower = command.lower()
         if lower in ("quit", "q", "exit"):
             break
+        if lower == "advanced":
+            guided = False
+            continue
+        if lower == "done":
+            try:
+                _save_record(record)
+            except Exception as exc:
+                print("save error:", exc)
+            break
+
+        if lower in {"tap", "scroll", "text"}:
+            guided = True
+            try:
+                record = _ensure_guided_identity(record, empty)
+                if lower == "tap":
+                    _guided_tap(config, record)
+                elif lower == "scroll":
+                    _guided_scroll(record)
+                else:
+                    _guided_text(record)
+            except Exception as exc:
+                print(f"{lower} error:", exc)
+            continue
+
         if lower.startswith("new "):
             record = empty(command[4:].strip())
         elif lower.startswith("name "):
@@ -197,16 +350,56 @@ def task_recorder() -> None:
         elif lower.startswith("tap "):
             parts = command.split(maxsplit=3)
             record["query_loop"].append({"type": "tap", "x": int(parts[1]), "y": int(parts[2]), "name": parts[3] if len(parts) > 3 else ""})
+        elif lower.startswith("scroll "):
+            try:
+                parts = command.split()
+                direction = parts[1]
+                distance = float(parts[2]) if len(parts) > 2 else 0.60
+                duration_ms = int(parts[3]) if len(parts) > 3 else 450
+                record["query_loop"].append(make_scroll_step(direction, distance, duration_ms))
+            except Exception as exc:
+                print("scroll error:", exc)
+        elif lower.startswith("text "):
+            try:
+                value = numeric_text_value(command[5:])
+                record["query_loop"].append({"type": "text_input", "value": value})
+            except Exception as exc:
+                print("text error:", exc)
+        elif lower.startswith("image "):
+            try:
+                from .adb import ADBDevice
+                from .click_events import ClickEventRegistry
+                from .screenshots import capture_runtime
+                from .template_capture import parse_region
+
+                parts = shlex.split(command)
+                if len(parts) < 2 or len(parts) > 4:
+                    raise ValueError("Syntax: image <target> [screenshot|-] [x,y,w,h]")
+                target = parts[1]
+                screenshot = None if len(parts) < 3 or parts[2] == "-" else expand_path(parts[2])
+                region = parse_region(parts[3]) if len(parts) == 4 else None
+                if screenshot is None:
+                    if not config:
+                        raise RuntimeError("Live-Screenshot benötigt eine geladene PNS-Wulf-Konfiguration")
+                    device = ADBDevice(config["adb_path"], config["serial"])
+                    screenshot = capture_runtime(device, config.get("screenshots_dir"), prefix="task-template")
+                registry_path = expand_path(config.get("click_events_file", "config/click_events.json")) if config else None
+                registry = ClickEventRegistry(registry_path) if registry_path else ClickEventRegistry()
+                event = registry.create_template_from_screenshot(target, screenshot, region)
+                record["query_loop"].append({"type": "tap_area", "target": target})
+                print("image saved", event.get("template"), "-> tap_area", target)
+            except Exception as exc:
+                print("image error:", exc)
         elif lower.startswith("note "):
             record["query_loop"].append({"type": "note", "text": command[5:].strip()})
         elif lower == "show":
             print(json.dumps(record, ensure_ascii=False, indent=2))
         elif lower == "save":
-            if not record["id"]:
-                print("new <id> zuerst ausführen")
-                continue
-            path = RECORDINGS_DIR / (record["id"] + ".task.json")
-            write_json(path, record)
-            print("saved", path)
+            try:
+                _save_record(record)
+            except Exception as exc:
+                print("save error:", exc)
+        elif lower == "":
+            continue
         else:
             print("unknown")

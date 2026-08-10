@@ -63,6 +63,27 @@ def _run_click(config: dict, device, registry: ClickEventRegistry, pause: PauseC
     return True
 
 
+def _run_scroll(device, step: dict) -> bool:
+    direction = str(step.get("direction", "down")).lower()
+    distance = float(step.get("distance", 0.60))
+    duration_ms = int(step.get("duration_ms", 450))
+    ok = device.scroll(direction, distance, duration_ms)
+    if ok:
+        log("SCROLL", f"{direction} distance={distance:.2f} duration_ms={duration_ms}", GREEN)
+    return ok
+
+
+def _run_text_input(device, step: dict) -> bool:
+    value = str(step.get("value", ""))
+    if not value or not value.isdigit():
+        log("TEXT INPUT", "Nur numerische Werte sind erlaubt", WARN)
+        return False
+    ok = device.text(value)
+    if ok:
+        log("TEXT INPUT", value, GREEN)
+    return ok
+
+
 def run_task(config: dict, device, connection, task: dict, irc: IRCRelay) -> bool:
     if not cooldown_ready(connection, task["id"]):
         log("SKIP", task["id"] + " cooldown")
@@ -83,7 +104,33 @@ def run_task(config: dict, device, connection, task: dict, irc: IRCRelay) -> boo
                 log("DRY", "not tapping " + str(step.get("target") or step.get("name")))
             else:
                 ok = _run_click(config, device, registry, pause, task, step)
-        elif step_type in ("open_area", "open_screen", "run_task_branch", "select_resource", "dispatch_if_march_slot_available", "select_option", "confirm"):
+        elif step_type == "scroll":
+            if not config.get("execute_clicks"):
+                log(
+                    "DRY",
+                    f"not scrolling {step.get('direction', 'down')} "
+                    f"distance={step.get('distance', 0.60)}",
+                )
+            else:
+                ok = _run_scroll(device, step)
+        elif step_type == "text_input":
+            value = str(step.get("value", ""))
+            if not value.isdigit():
+                log("TEXT INPUT", "Ungültiger Task: value muss eine Zahl sein", WARN)
+                ok = False
+            elif not config.get("execute_clicks"):
+                log("DRY", "not entering numeric text " + value)
+            else:
+                ok = _run_text_input(device, step)
+        elif step_type in (
+            "open_area",
+            "open_screen",
+            "run_task_branch",
+            "select_resource",
+            "dispatch_if_march_slot_available",
+            "select_option",
+            "confirm",
+        ):
             log("HOOK", f"Konzeptioneller Step: {step_type}; benötigt bei echter Ausführung einen aufgenommenen Click-Event-Step")
         elif step_type == "on_success":
             pass
