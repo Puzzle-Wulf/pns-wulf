@@ -3,10 +3,9 @@ from __future__ import annotations
 import os
 import re
 import shutil
-from pathlib import Path
 
 from .constants import VERSION
-from .paths import CONFIG_DIR, PROJECT_ROOT
+from .paths import CONFIG_DIR
 from .util import GREEN, load_json, log, write_json
 
 CONFIG_FILE = CONFIG_DIR / "pns_bot_config.json"
