@@ -18,8 +18,6 @@ runtime/*
 !runtime/.gitkeep
 recordings/*
 !recordings/.gitkeep
-pns_character_db/*
-!pns_character_db/.gitkeep
 *.db
 
 # Generated screenshots and extraction results
