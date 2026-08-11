@@ -7,9 +7,9 @@
   "adb_path": "adb",
   "serial": "emulator-5554",
   "instance_label": "Farmen-0",
-  "account": "Shadow-Claws",
+  "account": "Character-1",
   "package_name": "",
-  "character_name": "Shadow-Claws",
+  "character_name": "Character-1",
   "screenshots_dir": "runtime/screenshots",
   "character_db_dir": "runtime/characters",
   "execute_clicks": false,
@@ -45,7 +45,7 @@
   "runtime_state_file": "runtime/state.json",
   "start_behavior": "setup_network_adb_app_character_db_only_no_queue",
   "characters": [
-    "Shadow-Claws"
+    "Character-1"
   ],
   "active_character_index": 0,
   "character_identify": {
