@@ -28,11 +28,15 @@ class IRCRelay:
         if self.socket or not self.enabled():
             return
         raw = socket.create_connection((self.config["server"], int(self.config["port"])), timeout=15)
-        if self.config.get("use_tls"):
-            context = ssl.create_default_context() if self.config.get("tls_verify") else ssl._create_unverified_context()
-            self.socket = context.wrap_socket(raw, server_hostname=self.config.get("server"))
-        else:
-            self.socket = raw
+        try:
+            if self.config.get("use_tls"):
+                context = ssl.create_default_context() if self.config.get("tls_verify") else ssl._create_unverified_context()
+                self.socket = context.wrap_socket(raw, server_hostname=self.config.get("server"))
+            else:
+                self.socket = raw
+        except Exception:
+            raw.close()
+            raise
         if self.password():
             self.raw("PASS " + self.password())
         self.raw("NICK " + self.config.get("nick", "PNSWulf"))
