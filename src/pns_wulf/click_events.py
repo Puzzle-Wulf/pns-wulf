@@ -12,7 +12,7 @@ from .configuration import CLICK_EXAMPLE, CLICK_FILE
 from .constants import VERSION
 from .paths import PROJECT_ROOT, expand_path
 from .screenshots import capture_destination, capture_runtime
-from .template_capture import crop_template
+from .template_capture import crop_template, safe_event_name
 from .util import BAD, GREEN, WARN, load_json, log, write_json
 
 
@@ -58,10 +58,11 @@ class ClickEventRegistry:
         return self.list().get(name, {})
 
     def set_coordinate(self, name: str, x: int, y: int) -> dict:
+        asset_name = safe_event_name(name)
         data = self.load()
         event = data.setdefault("events", {}).setdefault(name, {})
         event["coordinate"] = {"x": int(x), "y": int(y)}
-        event.setdefault("template", f"assets/click-events/{name}.png")
+        event.setdefault("template", f"assets/click-events/{asset_name}.png")
         self.save(data)
         return event
 
@@ -69,7 +70,8 @@ class ClickEventRegistry:
         source = expand_path(file)
         if not source.exists():
             raise FileNotFoundError(source)
-        destination = PROJECT_ROOT / "assets" / "click-events" / f"{name}.png"
+        asset_name = safe_event_name(name)
+        destination = PROJECT_ROOT / "assets" / "click-events" / f"{asset_name}.png"
         destination.parent.mkdir(parents=True, exist_ok=True)
         if source.resolve() != destination.resolve():
             shutil.copyfile(source, destination)
@@ -122,7 +124,12 @@ class ClickEventRegistry:
         if coordinate.get("x") is not None and coordinate.get("y") is not None:
             return ClickResolution(True, target, int(coordinate["x"]), int(coordinate["y"]), "registry-coordinate")
 
-        template_value = step.get("template") or event.get("template") or f"assets/click-events/{target}.png"
+        template_value = step.get("template") or event.get("template")
+        if not template_value:
+            try:
+                template_value = f"assets/click-events/{safe_event_name(target)}.png"
+            except ValueError as exc:
+                return ClickResolution(False, target, source="template", reason=f"Ungültiger Event-Name: {exc}")
         template = expand_path(template_value)
         if not template.exists():
             return ClickResolution(
@@ -227,7 +234,7 @@ class PauseController:
         print("  ./pns-bot screenshot --destination Desktop")
         print("  ./pns-bot screenshot --destination Userhome")
         print(f"  ./pns-bot click-event set {initial.target} --x X --y Y")
-        print(f"  PNG-Ziel: {initial.template or f'assets/click-events/{initial.target}.png'}\n")
+        print(f"  PNG-Ziel: {initial.template or f'assets/click-events/{safe_event_name(initial.target)}.png'}\n")
 
         poll = max(0.5, float(self.config.get("pause_poll_seconds", 3)))
         timeout = float(self.config.get("pause_timeout_seconds", 0) or 0)
