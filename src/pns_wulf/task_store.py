@@ -7,7 +7,8 @@ from pathlib import Path
 
 from .configuration import QUEUE_EXAMPLE, QUEUE_FILE
 from .constants import VERSION
-from .paths import PROJECT_ROOT, RECORDINGS_DIR, expand_path
+from .paths import RECORDINGS_DIR, expand_path
+from .template_capture import safe_event_name
 from .util import GREEN, load_json, log, write_json
 
 
@@ -198,7 +199,7 @@ def _ensure_guided_identity(record: dict, empty) -> dict:
 def _save_record(record: dict) -> Path:
     if not record.get("id"):
         raise ValueError("Task-ID fehlt")
-    path = RECORDINGS_DIR / (record["id"] + ".task.json")
+    path = RECORDINGS_DIR / (safe_event_name(record["id"]) + ".task.json")
     write_json(path, record)
     print("saved", path)
     return path
