@@ -1,7 +1,10 @@
+import tempfile
 import unittest
+from pathlib import Path
+from unittest import mock
 
 from pns_wulf.adb import scroll_swipe_coordinates
-from pns_wulf.task_store import make_scroll_step, numeric_text_value
+from pns_wulf.task_store import _save_record, make_scroll_step, numeric_text_value
 from pns_wulf.touch_capture import (
     MultiTouchState,
     TouchDeviceInfo,
@@ -35,6 +38,15 @@ class TaskInputTests(unittest.TestCase):
             numeric_text_value("12a4")
         with self.assertRaises(ValueError):
             numeric_text_value("")
+
+    def test_recording_filename_cannot_escape_recordings_directory(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            with mock.patch("pns_wulf.task_store.RECORDINGS_DIR", base):
+                path = _save_record({"id": "../../outside/task", "query_loop": []})
+            self.assertEqual(path.parent, base)
+            self.assertEqual(path.name, "outside_task.task.json")
+            self.assertTrue(path.exists())
 
     def test_parse_multitouch_device(self):
         listing = """
