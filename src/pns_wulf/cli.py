@@ -7,9 +7,9 @@ from .adb import ADBDevice
 from .automation import play
 from .click_events import ClickEventRegistry
 from .configuration import load_config, setup
-from .paths import expand_path
 from .constants import REPOSITORY_URL, VERSION
 from .database import list_cooldowns
+from .paths import expand_path
 from .runtime import initialize_runtime, read_character, where_am_i
 from .screenshots import capture_destination, capture_runtime
 from .task_store import (
@@ -150,7 +150,7 @@ def main(argv=None) -> int:
             print(json.dumps(registry.create_template_from_screenshot(args.name, args.file, region, args.threshold), ensure_ascii=False, indent=2))
         elif args.ecmd == "capture":
             if not local_config:
-                raise SystemExit("click-event capture benötigt eine vorhandene config/pns-wulf.json")
+                raise SystemExit("click-event capture benötigt eine vorhandene config/pns_bot_config.json")
             device = ADBDevice(local_config["adb_path"], local_config["serial"])
             screenshot = capture_runtime(device, local_config.get("screenshots_dir"), prefix="template-source")
             region = parse_region(args.region)
