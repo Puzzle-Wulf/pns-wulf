@@ -1,7 +1,7 @@
 import unittest
 
 from pns_wulf.cli import build_parser
-from pns_wulf.template_capture import parse_region
+from pns_wulf.template_capture import parse_region, safe_event_name
 
 
 class TemplateCaptureTests(unittest.TestCase):
@@ -15,6 +15,12 @@ class TemplateCaptureTests(unittest.TestCase):
             parse_region("10,20,0,40")
         with self.assertRaises(ValueError):
             parse_region("10,20,30")
+
+    def test_safe_event_name_removes_path_components(self):
+        self.assertEqual(safe_event_name("../donate/button"), "donate_button")
+        self.assertEqual(safe_event_name("alliance research"), "alliance_research")
+        with self.assertRaises(ValueError):
+            safe_event_name("..")
 
     def test_click_event_crop_parser(self):
         args = build_parser().parse_args(
