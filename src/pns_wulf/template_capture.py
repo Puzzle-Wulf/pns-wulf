@@ -22,7 +22,8 @@ def parse_region(value: str | None) -> tuple[int, int, int, int] | None:
     return region
 
 
-def _safe_name(value: str) -> str:
+def safe_event_name(value: str) -> str:
+    """Return a filesystem-safe click-event asset name without path components."""
     name = _SAFE_NAME.sub("_", str(value or "").strip()).strip("._")
     if not name:
         raise ValueError("Event-Name ist leer")
@@ -155,7 +156,7 @@ def crop_template(
     selected = _normalize_region(selected, image.width, image.height)
     x, y, w, h = selected
 
-    target = expand_path(destination) if destination else PROJECT_ROOT / "assets" / "click-events" / f"{_safe_name(event_name)}.png"
+    target = expand_path(destination) if destination else PROJECT_ROOT / "assets" / "click-events" / f"{safe_event_name(event_name)}.png"
     target.parent.mkdir(parents=True, exist_ok=True)
     image.crop((x, y, x + w, y + h)).save(target, format="PNG", optimize=True)
     return target, selected, (image.width, image.height)
