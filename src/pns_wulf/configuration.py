@@ -3,10 +3,9 @@ from __future__ import annotations
 import os
 import re
 import shutil
-from pathlib import Path
 
 from .constants import VERSION
-from .paths import CONFIG_DIR, PROJECT_ROOT
+from .paths import CONFIG_DIR
 from .util import GREEN, load_json, log, write_json
 
 CONFIG_FILE = CONFIG_DIR / "pns_bot_config.json"
@@ -94,7 +93,7 @@ def setup() -> dict:
     example["adb_path"] = input(f"ADB path [{default_adb_path()}]: ").strip() or default_adb_path()
     example["serial"] = input("ADB Serial [emulator-5554]: ").strip() or "emulator-5554"
     example["instance_label"] = input("Instanzlabel [Farmen-0]: ").strip() or "Farmen-0"
-    old_account = example.get("account") or "Shadow-Claws"
+    old_account = example.get("account") or "Character-1"
     characters = parse_character_list(
         input(f"Charaktere kommagetrennt [{old_account}]: ").strip() or old_account
     )

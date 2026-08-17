@@ -30,6 +30,25 @@ class ClickEventTests(unittest.TestCase):
             self.assertEqual((resolution.x, resolution.y), (512, 840))
             self.assertEqual(resolution.source, "registry-coordinate")
 
+    def test_coordinate_default_template_uses_safe_asset_name(self):
+        with tempfile.TemporaryDirectory() as temp:
+            registry = ClickEventRegistry(Path(temp) / "events.json")
+            event = registry.set_coordinate("../alliance/button", 12, 34)
+            self.assertEqual(event["template"], "assets/click-events/alliance_button.png")
+
+    def test_set_template_cannot_escape_click_event_assets(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            source = base / "source.png"
+            source.write_bytes(b"template")
+            registry = ClickEventRegistry(base / "events.json")
+            with mock.patch("pns_wulf.click_events.PROJECT_ROOT", base):
+                event = registry.set_template("../../escape/button", str(source))
+            target = base / "assets" / "click-events" / "escape_button.png"
+            self.assertTrue(target.exists())
+            self.assertEqual(event["template"], "assets/click-events/escape_button.png")
+            self.assertFalse((base / "escape" / "button.png").exists())
+
     def test_missing_template_pauses_resolution(self):
         with tempfile.TemporaryDirectory() as temp:
             registry = ClickEventRegistry(Path(temp) / "events.json")

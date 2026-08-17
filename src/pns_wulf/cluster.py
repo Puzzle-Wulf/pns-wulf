@@ -51,8 +51,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
 def can_reach(url: str) -> bool:
     try:
-        urllib.request.urlopen(url.rstrip("/") + "/status", timeout=2)
-        return True
+        with urllib.request.urlopen(url.rstrip("/") + "/status", timeout=2):
+            return True
     except Exception:
         return False
 
@@ -78,10 +78,9 @@ def connect_host(config: dict, url_override: str | None = None) -> None:
         }
     ).encode()
     try:
-        urllib.request.urlopen(
-            urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"}),
-            timeout=5,
-        ).read()
+        request = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(request, timeout=5) as response:
+            response.read()
     except Exception as exc:
         log("CLUSTER", f"Verbindung fehlgeschlagen: {exc}", WARN)
 

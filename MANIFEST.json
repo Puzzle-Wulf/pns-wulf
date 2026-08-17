@@ -14,6 +14,7 @@
   "coordinate_command": "./pns-bot click-event set <event> --x <x> --y <y>",
   "entry_points": [
     "pns-bot",
+    "pns-bot.sh",
     "pns-bot.cmd",
     "pns_bot.py"
   ],

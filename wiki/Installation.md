@@ -4,7 +4,7 @@
 
 - Python 3.10 oder neuer
 - ADB-Verbindung zum Gerät oder Emulator
-- optional OpenCV für PNG-Template-Matching
+- optionales Vision-Paket (`numpy`, `opencv-python-headless`, `Pillow`) für PNG-Template-Matching sowie Screenshot-Auswahl/Crop
 
 ## Linux
 

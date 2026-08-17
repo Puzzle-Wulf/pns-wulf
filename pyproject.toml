@@ -19,7 +19,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-vision = ["numpy>=1.26", "opencv-python-headless>=4.10"]
+vision = ["numpy>=1.26", "opencv-python-headless>=4.10", "Pillow>=10"]
 dev = ["pytest>=8", "ruff>=0.5"]
 
 [project.scripts]
